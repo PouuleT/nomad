@@ -1,0 +1,1317 @@
+Environment: test
+cleaning up...
+Built project successfully. Stored in "/Users/michael/go/src/github.com/hashicorp/nomad/ui/tmp/class-tests_dist-JrM08qnc.tmp".
+ok 1 Chrome 75.0 - [3142 ms] - Acceptance | allocation detail: /allocation/:id should name the allocation and link to the corresponding job and node
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: Getting the \\\'@each\\\' property on object  is deprecated [deprecation id: ember-metal.getting-each] See https://emberjs.com/deprecations/v3.x#toc_getting-the-each-property for more details.\\n        at logDeprecationStackTrace (http://localhost:7357/ui/assets/vendor.js:17345:29)\\n        at HANDLERS.<computed> (http://localhost:7357/ui/assets/vendor.js:17447:17)\\n        at raiseOnDeprecation (http://localhost:7357/ui/assets/vendor.js:17369:17)\\n        at HANDLERS.<computed> (http://localhost:7357/ui/assets/vendor.js:17447:17)\\n        at handleDeprecationWorkflow (http://localhost:7357/ui/assets/vendor.js:121752:9)\\n        at HANDLERS.<computed> (http://localhost:7357/ui/assets/vendor.js:17447:17)\\n        at deprecationCollector (http://localhost:7357/ui/assets/vendor.js:121777:5)\\n        at HANDLERS.<computed> (http://localhost:7357/ui/assets/vendor.js:17447:17)\\n        at invoke (http://localhost:7357/ui/assets/vendor.js:17456:17)\'\n' }
+            { type: 'warn',
+              text:
+               '\'WARNING: Dependent keys containing @each only work one level deep. You used the key "allocations.@each.unhealthyDrivers.[]" which is invalid. Please create an intermediary computed property.\'\n' }
+            { type: 'warn',
+              text:
+               '\'ember-moment: an empty value (null, undefined, or "") was passed to ember-moment helper\'\n' }
+    ...
+ok 2 Chrome 75.0 - [638 ms] - Acceptance | allocation detail: /allocation/:id should include resource utilization graphs
+ok 3 Chrome 75.0 - [466 ms] - Acceptance | allocation detail: /allocation/:id should list all tasks for the allocation
+ok 4 Chrome 75.0 - [503 ms] - Acceptance | allocation detail: each task row should list high-level information for the task
+ok 5 Chrome 75.0 - [918 ms] - Acceptance | allocation detail: each task row should link to the task detail page
+ok 6 Chrome 75.0 - [599 ms] - Acceptance | allocation detail: tasks with an unhealthy driver have a warning icon
+ok 7 Chrome 75.0 - [568 ms] - Acceptance | allocation detail: when there are no tasks, an empty state is shown
+ok 8 Chrome 75.0 - [533 ms] - Acceptance | allocation detail: when the allocation has not been rescheduled, the reschedule events section is not rendered
+ok 9 Chrome 75.0 - [637 ms] - Acceptance | allocation detail: when the allocation is not found, an error message is shown, but the URL persists
+ok 10 Chrome 75.0 - [528 ms] - Acceptance | allocation detail: allocation can be stopped
+ok 11 Chrome 75.0 - [493 ms] - Acceptance | allocation detail: allocation can be restarted
+ok 12 Chrome 75.0 - [1012 ms] - Acceptance | allocation detail: while an allocation is being restarted, the stop button is disabled
+ok 13 Chrome 75.0 - [528 ms] - Acceptance | allocation detail: if stopping or restarting fails, an error message is shown
+ok 14 Chrome 75.0 - [858 ms] - Acceptance | allocation detail (rescheduled): when the allocation has been rescheduled, the reschedule events section is rendered
+ok 15 Chrome 75.0 - [430 ms] - Acceptance | allocation detail (not running): when the allocation is not running, the utilization graphs are replaced by an empty message
+ok 16 Chrome 75.0 - [2548 ms] - Acceptance | allocation detail (preemptions): shows a dedicated section to the allocation that preempted this allocation
+ok 17 Chrome 75.0 - [887 ms] - Acceptance | allocation detail (preemptions): shows a dedicated section to the allocations this allocation preempted
+ok 18 Chrome 75.0 - [1725 ms] - Acceptance | allocation detail (preemptions): each preempted allocation in the table lists basic allocation information
+ok 19 Chrome 75.0 - [1102 ms] - Acceptance | allocation detail (preemptions): when an allocation both preempted allocations and was preempted itself, both preemptions sections are shown
+ok 20 Chrome 75.0 - [469 ms] - Acceptance | application errors : transitioning away from an error page resets the global error
+ok 21 Chrome 75.0 - [395 ms] - Acceptance | application errors : the 403 error page links to the ACL tokens page
+ok 22 Chrome 75.0 - [262 ms] - Acceptance | application errors : the no leader error state gets its own error message
+ok 23 Chrome 75.0 - [695 ms] - Acceptance | application errors : error pages include links to the jobs and clients pages
+ok 24 Chrome 75.0 - [1276 ms] - Acceptance | client detail: /clients/:id should have a breadcrumb trail linking back to clients
+ok 25 Chrome 75.0 - [1197 ms] - Acceptance | client detail: /clients/:id should list immediate details for the node in the title
+ok 26 Chrome 75.0 - [1263 ms] - Acceptance | client detail: /clients/:id should list additional detail for the node below the title
+ok 27 Chrome 75.0 - [1183 ms] - Acceptance | client detail: /clients/:id should include resource utilization graphs
+ok 28 Chrome 75.0 - [1204 ms] - Acceptance | client detail: /clients/:id should list all allocations on the node
+ok 29 Chrome 75.0 - [1253 ms] - Acceptance | client detail: each allocation should have high-level details for the allocation
+ok 30 Chrome 75.0 - [1475 ms] - Acceptance | client detail: each allocation should show job information even if the job is incomplete and already in the store
+ok 31 Chrome 75.0 - [1816 ms] - Acceptance | client detail: each allocation should link to the allocation detail page
+ok 32 Chrome 75.0 - [1936 ms] - Acceptance | client detail: each allocation should link to the job the allocation belongs to
+ok 33 Chrome 75.0 - [1107 ms] - Acceptance | client detail: the allocation section should show the count of preempted allocations on the client
+ok 34 Chrome 75.0 - [1654 ms] - Acceptance | client detail: clicking the preemption badge filters the allocations table and sets a query param
+ok 35 Chrome 75.0 - [2272 ms] - Acceptance | client detail: clicking the total allocations badge resets the filter and removes the query param
+ok 36 Chrome 75.0 - [991 ms] - Acceptance | client detail: navigating directly to the client detail page with the preemption query param set will filter the allocations table
+ok 37 Chrome 75.0 - [1009 ms] - Acceptance | client detail: /clients/:id should list all attributes for the node
+ok 38 Chrome 75.0 - [403 ms] - Acceptance | client detail: /clients/:id lists all meta attributes
+ok 39 Chrome 75.0 - [1015 ms] - Acceptance | client detail: /clients/:id shows an empty message when there is no meta data
+ok 40 Chrome 75.0 - [278 ms] - Acceptance | client detail: when the node is not found, an error message is shown, but the URL persists
+ok 41 Chrome 75.0 - [1006 ms] - Acceptance | client detail: /clients/:id shows the recent events list
+ok 42 Chrome 75.0 - [1104 ms] - Acceptance | client detail: each node event shows basic node event information
+ok 43 Chrome 75.0 - [1134 ms] - Acceptance | client detail: /clients/:id shows the driver status of every driver for the node
+ok 44 Chrome 75.0 - [1013 ms] - Acceptance | client detail: each driver can be opened to see a message and attributes
+ok 45 Chrome 75.0 - [404 ms] - Acceptance | client detail: the status light indicates when the node is ineligible for scheduling
+ok 46 Chrome 75.0 - [451 ms] - Acceptance | client detail: when the node has a drain strategy with a positive deadline, the drain stategy section prints the duration
+ok 47 Chrome 75.0 - [489 ms] - Acceptance | client detail: when the node has a drain stategy with no deadline, the drain stategy section mentions that and omits the force deadline
+ok 48 Chrome 75.0 - [470 ms] - Acceptance | client detail: when the node has a drain stategy with a negative deadline, the drain strategy section shows the force badge
+ok 49 Chrome 75.0 - [1321 ms] - Acceptance | client detail (multi-namespace): when the node has allocations on different namespaces, the associated jobs are fetched correctly
+ok 50 Chrome 75.0 - [443 ms] - Acceptance | clients list: /clients should list one page of clients
+ok 51 Chrome 75.0 - [243 ms] - Acceptance | clients list: each client record should show high-level info of the client
+ok 52 Chrome 75.0 - [357 ms] - Acceptance | clients list: client status, draining, and eligibility are collapsed into one column
+ok 53 Chrome 75.0 - [434 ms] - Acceptance | clients list: each client should link to the client detail page
+ok 54 Chrome 75.0 - [253 ms] - Acceptance | clients list: when there are no clients, there is an empty message
+ok 55 Chrome 75.0 - [512 ms] - Acceptance | clients list: when there are clients, but no matches for a search term, there is an empty message
+ok 56 Chrome 75.0 - [245 ms] - Acceptance | clients list: when accessing clients is forbidden, show a message with a link to the tokens page
+ok 57 Chrome 75.0 - [500 ms] - Acceptance | clients list: the Class facet has the correct options
+ok 58 Chrome 75.0 - [479 ms] - Acceptance | clients list: the Class facet filters the nodes list by Class
+ok 59 Chrome 75.0 - [640 ms] - Acceptance | clients list: selecting multiple options in the Class facet results in a broader search
+ok 60 Chrome 75.0 - [542 ms] - Acceptance | clients list: selecting options in the Class facet updates the class query param
+ok 61 Chrome 75.0 - [576 ms] - Acceptance | clients list: the State facet has the correct options
+ok 62 Chrome 75.0 - [552 ms] - Acceptance | clients list: the State facet filters the nodes list by State
+ok 63 Chrome 75.0 - [723 ms] - Acceptance | clients list: selecting multiple options in the State facet results in a broader search
+ok 64 Chrome 75.0 - [757 ms] - Acceptance | clients list: selecting options in the State facet updates the state query param
+ok 65 Chrome 75.0 - [431 ms] - Acceptance | clients list: the Datacenters facet has the correct options
+ok 66 Chrome 75.0 - [439 ms] - Acceptance | clients list: the Datacenters facet filters the nodes list by Datacenters
+ok 67 Chrome 75.0 - [569 ms] - Acceptance | clients list: selecting multiple options in the Datacenters facet results in a broader search
+ok 68 Chrome 75.0 - [480 ms] - Acceptance | clients list: selecting options in the Datacenters facet updates the dc query param
+ok 69 Chrome 75.0 - [363 ms] - Acceptance | clients list: when the facet selections result in no matches, the empty state states why
+ok 70 Chrome 75.0 - [282 ms] - Acceptance | clients list: the clients list is immediately filtered based on query params
+ok 71 Chrome 75.0 - [1246 ms] - Acceptance | job allocations: lists all allocations for the job
+ok 72 Chrome 75.0 - [2592 ms] - Acceptance | job allocations: allocations table is sortable
+ok 73 Chrome 75.0 - [1769 ms] - Acceptance | job allocations: allocations table is searchable
+ok 74 Chrome 75.0 - [1144 ms] - Acceptance | job allocations: when a search yields no results, the search box remains
+ok 75 Chrome 75.0 - [233 ms] - Acceptance | job allocations: when the job for the allocations is not found, an error message is shown, but the URL persists
+ok 76 Chrome 75.0 - [477 ms] - Acceptance | job definition: visiting /jobs/:job_id/definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember10984>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 77 Chrome 75.0 - [491 ms] - Acceptance | job definition: the job definition page contains a json viewer component
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11066>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 78 Chrome 75.0 - [684 ms] - Acceptance | job definition: the job definition page requests the job to display in an unmutated form
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11156>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 79 Chrome 75.0 - [847 ms] - Acceptance | job definition: the job definition can be edited
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11244>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11248>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 80 Chrome 75.0 - [853 ms] - Acceptance | job definition: when in editing mode, the action can be canceled, showing the read-only definition again
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11336>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11338>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11340>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 81 Chrome 75.0 - [698 ms] - Acceptance | job definition: when in editing mode, the editor is prepopulated with the job definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11426>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11428>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 82 Chrome 75.0 - [1245 ms] - Acceptance | job definition: when changes are submitted, the site redirects to the job overview page
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11516>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11518>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 83 Chrome 75.0 - [351 ms] - Acceptance | job definition: when the job for the definition is not found, an error message is shown, but the URL persists
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember11752>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 84 Chrome 75.0 - [285 ms] - Acceptance | job deployments: /jobs/:id/deployments should list all job deployments
+ok 85 Chrome 75.0 - [252 ms] - Acceptance | job deployments: each deployment mentions the deployment shortId, status, version, and time since it was submitted
+ok 86 Chrome 75.0 - [273 ms] - Acceptance | job deployments: when the deployment is running and needs promotion, the deployment item says so
+ok 87 Chrome 75.0 - [904 ms] - Acceptance | job deployments: each deployment item can be opened to show details
+ok 88 Chrome 75.0 - [996 ms] - Acceptance | job deployments: when open, a deployment shows the deployment metrics
+ok 89 Chrome 75.0 - [916 ms] - Acceptance | job deployments: when open, a deployment shows a list of all task groups and their respective stats
+ok 90 Chrome 75.0 - [1172 ms] - Acceptance | job deployments: when open, a deployment shows a list of all allocations for the deployment
+ok 91 Chrome 75.0 - [271 ms] - Acceptance | job deployments: when the job for the deployments is not found, an error message is shown, but the URL persists
+ok 92 Chrome 75.0 - [864 ms] - Acceptance | job detail (batch): visiting /jobs/:job_id
+ok 93 Chrome 75.0 - [888 ms] - Acceptance | job detail (batch): the subnav links to overview
+ok 94 Chrome 75.0 - [946 ms] - Acceptance | job detail (batch): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember13037>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 95 Chrome 75.0 - [920 ms] - Acceptance | job detail (batch): the subnav links to versions
+ok 96 Chrome 75.0 - [878 ms] - Acceptance | job detail (batch): the subnav links to evaluations
+ok 97 Chrome 75.0 - [837 ms] - Acceptance | job detail (batch): allocations for the job are shown in the overview
+ok 98 Chrome 75.0 - [860 ms] - Acceptance | job detail (system): visiting /jobs/:job_id
+ok 99 Chrome 75.0 - [872 ms] - Acceptance | job detail (system): the subnav links to overview
+ok 100 Chrome 75.0 - [891 ms] - Acceptance | job detail (system): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember13906>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 101 Chrome 75.0 - [847 ms] - Acceptance | job detail (system): the subnav links to versions
+ok 102 Chrome 75.0 - [833 ms] - Acceptance | job detail (system): the subnav links to evaluations
+ok 103 Chrome 75.0 - [783 ms] - Acceptance | job detail (system): allocations for the job are shown in the overview
+ok 104 Chrome 75.0 - [317 ms] - Acceptance | job detail (periodic): visiting /jobs/:job_id
+ok 105 Chrome 75.0 - [293 ms] - Acceptance | job detail (periodic): the subnav links to overview
+ok 106 Chrome 75.0 - [414 ms] - Acceptance | job detail (periodic): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember14729>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 107 Chrome 75.0 - [384 ms] - Acceptance | job detail (periodic): the subnav links to versions
+ok 108 Chrome 75.0 - [401 ms] - Acceptance | job detail (periodic): the subnav links to evaluations
+ok 109 Chrome 75.0 - [364 ms] - Acceptance | job detail (periodic): children for the job are shown in the overview
+ok 110 Chrome 75.0 - [449 ms] - Acceptance | job detail (parameterized): visiting /jobs/:job_id
+ok 111 Chrome 75.0 - [316 ms] - Acceptance | job detail (parameterized): the subnav links to overview
+ok 112 Chrome 75.0 - [327 ms] - Acceptance | job detail (parameterized): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember15435>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 113 Chrome 75.0 - [317 ms] - Acceptance | job detail (parameterized): the subnav links to versions
+ok 114 Chrome 75.0 - [352 ms] - Acceptance | job detail (parameterized): the subnav links to evaluations
+ok 115 Chrome 75.0 - [314 ms] - Acceptance | job detail (parameterized): children for the job are shown in the overview
+ok 116 Chrome 75.0 - [811 ms] - Acceptance | job detail (periodic child): visiting /jobs/:job_id
+ok 117 Chrome 75.0 - [894 ms] - Acceptance | job detail (periodic child): the subnav links to overview
+ok 118 Chrome 75.0 - [1010 ms] - Acceptance | job detail (periodic child): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember16236>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 119 Chrome 75.0 - [1040 ms] - Acceptance | job detail (periodic child): the subnav links to versions
+ok 120 Chrome 75.0 - [993 ms] - Acceptance | job detail (periodic child): the subnav links to evaluations
+ok 121 Chrome 75.0 - [885 ms] - Acceptance | job detail (periodic child): allocations for the job are shown in the overview
+ok 122 Chrome 75.0 - [889 ms] - Acceptance | job detail (parameterized child): visiting /jobs/:job_id
+ok 123 Chrome 75.0 - [974 ms] - Acceptance | job detail (parameterized child): the subnav links to overview
+ok 124 Chrome 75.0 - [1007 ms] - Acceptance | job detail (parameterized child): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember17215>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 125 Chrome 75.0 - [969 ms] - Acceptance | job detail (parameterized child): the subnav links to versions
+ok 126 Chrome 75.0 - [842 ms] - Acceptance | job detail (parameterized child): the subnav links to evaluations
+ok 127 Chrome 75.0 - [848 ms] - Acceptance | job detail (parameterized child): allocations for the job are shown in the overview
+ok 128 Chrome 75.0 - [1077 ms] - Acceptance | job detail (service): visiting /jobs/:job_id
+ok 129 Chrome 75.0 - [1205 ms] - Acceptance | job detail (service): the subnav links to overview
+ok 130 Chrome 75.0 - [1106 ms] - Acceptance | job detail (service): the subnav links to definition
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember18196>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 131 Chrome 75.0 - [910 ms] - Acceptance | job detail (service): the subnav links to versions
+ok 132 Chrome 75.0 - [1101 ms] - Acceptance | job detail (service): the subnav links to evaluations
+ok 133 Chrome 75.0 - [826 ms] - Acceptance | job detail (service): allocations for the job are shown in the overview
+ok 134 Chrome 75.0 - [949 ms] - Acceptance | job detail (service): the subnav links to deployment
+ok 135 Chrome 75.0 - [906 ms] - Acceptance | job detail (service): when the job is not found, an error message is shown, but the URL persists
+ok 136 Chrome 75.0 - [1147 ms] - Acceptance | job detail (with namespaces): when there are namespaces, the job detail page states the namespace for the job
+ok 137 Chrome 75.0 - [1509 ms] - Acceptance | job detail (with namespaces): when switching namespaces, the app redirects to /jobs with the new namespace
+ok 138 Chrome 75.0 - [297 ms] - Acceptance | job evaluations: lists all evaluations for the job
+ok 139 Chrome 75.0 - [290 ms] - Acceptance | job evaluations: evaluations table is sortable
+ok 140 Chrome 75.0 - [243 ms] - Acceptance | job evaluations: when the job for the evaluations is not found, an error message is shown, but the URL persists
+ok 141 Chrome 75.0 - [185 ms] - Acceptance | job run: visiting /jobs/run
+ok 142 Chrome 75.0 - [288 ms] - Acceptance | job run: when submitting a job, the site redirects to the new job overview page
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember19845>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 143 Chrome 75.0 - [316 ms] - Acceptance | job run: when submitting a job to a different namespace, the redirect to the job overview page takes namespace into account
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember19947>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 144 Chrome 75.0 - [256 ms] - Acceptance | job versions: /jobs/:id/versions should list all job versions
+ok 145 Chrome 75.0 - [279 ms] - Acceptance | job versions: each version mentions the version number, the stability, and the submitted time
+ok 146 Chrome 75.0 - [288 ms] - Acceptance | job versions: when the job for the versions is not found, an error message is shown, but the URL persists
+ok 147 Chrome 75.0 - [179 ms] - Acceptance | jobs list: visiting /jobs
+ok 148 Chrome 75.0 - [694 ms] - Acceptance | jobs list: /jobs should list the first page of jobs sorted by modify index
+ok 149 Chrome 75.0 - [329 ms] - Acceptance | jobs list: each job row should contain information about the job
+ok 150 Chrome 75.0 - [918 ms] - Acceptance | jobs list: each job row should link to the corresponding job
+ok 151 Chrome 75.0 - [219 ms] - Acceptance | jobs list: the new job button transitions to the new job page
+ok 152 Chrome 75.0 - [188 ms] - Acceptance | jobs list: when there are no jobs, there is an empty message
+ok 153 Chrome 75.0 - [539 ms] - Acceptance | jobs list: when there are jobs, but no matches for a search result, there is an empty message
+ok 154 Chrome 75.0 - [1117 ms] - Acceptance | jobs list: searching resets the current page
+ok 155 Chrome 75.0 - [545 ms] - Acceptance | jobs list: when the namespace query param is set, only matching jobs are shown and the namespace value is forwarded to app state
+ok 156 Chrome 75.0 - [255 ms] - Acceptance | jobs list: when accessing jobs is forbidden, show a message with a link to the tokens page
+ok 157 Chrome 75.0 - [234 ms] - Acceptance | jobs list: the jobs list page has appropriate faceted search options
+ok 158 Chrome 75.0 - [777 ms] - Acceptance | jobs list: the Type facet has the correct options
+ok 159 Chrome 75.0 - [745 ms] - Acceptance | jobs list: the Type facet filters the jobs list by Type
+ok 160 Chrome 75.0 - [830 ms] - Acceptance | jobs list: selecting multiple options in the Type facet results in a broader search
+ok 161 Chrome 75.0 - [1062 ms] - Acceptance | jobs list: selecting options in the Type facet updates the type query param
+ok 162 Chrome 75.0 - [870 ms] - Acceptance | jobs list: the Status facet has the correct options
+ok 163 Chrome 75.0 - [703 ms] - Acceptance | jobs list: the Status facet filters the jobs list by Status
+ok 164 Chrome 75.0 - [721 ms] - Acceptance | jobs list: selecting multiple options in the Status facet results in a broader search
+ok 165 Chrome 75.0 - [774 ms] - Acceptance | jobs list: selecting options in the Status facet updates the status query param
+ok 166 Chrome 75.0 - [595 ms] - Acceptance | jobs list: the Datacenter facet has the correct options
+ok 167 Chrome 75.0 - [596 ms] - Acceptance | jobs list: the Datacenter facet filters the jobs list by Datacenter
+ok 168 Chrome 75.0 - [602 ms] - Acceptance | jobs list: selecting multiple options in the Datacenter facet results in a broader search
+ok 169 Chrome 75.0 - [665 ms] - Acceptance | jobs list: selecting options in the Datacenter facet updates the dc query param
+ok 170 Chrome 75.0 - [619 ms] - Acceptance | jobs list: the Prefix facet has the correct options
+ok 171 Chrome 75.0 - [883 ms] - Acceptance | jobs list: the Prefix facet filters the jobs list by Prefix
+ok 172 Chrome 75.0 - [1021 ms] - Acceptance | jobs list: selecting multiple options in the Prefix facet results in a broader search
+ok 173 Chrome 75.0 - [926 ms] - Acceptance | jobs list: selecting options in the Prefix facet updates the prefix query param
+ok 174 Chrome 75.0 - [389 ms] - Acceptance | jobs list: when the facet selections result in no matches, the empty state states why
+ok 175 Chrome 75.0 - [385 ms] - Acceptance | jobs list: the jobs list is immediately filtered based on query params
+ok 176 Chrome 75.0 - [565 ms] - Acceptance | namespaces (disabled): the namespace switcher is not in the gutter menu
+ok 177 Chrome 75.0 - [816 ms] - Acceptance | namespaces (disabled): the jobs request is made with no query params
+ok 178 Chrome 75.0 - [787 ms] - Acceptance | namespaces (enabled): the namespace switcher lists all namespaces
+ok 179 Chrome 75.0 - [919 ms] - Acceptance | namespaces (enabled): changing the namespace sets the namespace in localStorage
+ok 180 Chrome 75.0 - [943 ms] - Acceptance | namespaces (enabled): changing the namespace refreshes the jobs list when on the jobs page
+ok 181 Chrome 75.0 - [355 ms] - Acceptance | regions (only one): when there is only one region, the region switcher is not shown in the nav bar and the region is not in the page title
+ok 182 Chrome 75.0 - [289 ms] - Acceptance | regions (only one): when the only region is not named "global", the region switcher still is not shown
+ok 183 Chrome 75.0 - [565 ms] - Acceptance | regions (only one): pages do not include the region query param
+ok 184 Chrome 75.0 - [655 ms] - Acceptance | regions (only one): api requests do not include the region query param
+ok 185 Chrome 75.0 - [369 ms] - Acceptance | regions (many): the region switcher is rendered in the nav bar and the region is in the page title
+ok 186 Chrome 75.0 - [434 ms] - Acceptance | regions (many): when on the default region, pages do not include the region query param
+ok 187 Chrome 75.0 - [604 ms] - Acceptance | regions (many): switching regions sets localStorage and the region query param
+ok 188 Chrome 75.0 - [586 ms] - Acceptance | regions (many): switching regions to the default region, unsets the region query param
+ok 189 Chrome 75.0 - [1005 ms] - Acceptance | regions (many): switching regions on deep pages redirects to the application root
+ok 190 Chrome 75.0 - [468 ms] - Acceptance | regions (many): navigating directly to a page with the region query param sets the application to that region
+ok 191 Chrome 75.0 - [1434 ms] - Acceptance | regions (many): when the region is not the default region, all api requests include the region query param
+ok 192 Chrome 75.0 - [237 ms] - Acceptance | server detail: visiting /servers/:server_name
+ok 193 Chrome 75.0 - [260 ms] - Acceptance | server detail: the server detail page should list all tags for the server
+ok 194 Chrome 75.0 - [247 ms] - Acceptance | server detail: the list of servers from /servers should still be present
+ok 195 Chrome 75.0 - [262 ms] - Acceptance | server detail: the active server should be denoted in the table
+ok 196 Chrome 75.0 - [351 ms] - Acceptance | server detail: when the server is not found, an error message is shown, but the URL persists
+ok 197 Chrome 75.0 - [407 ms] - Acceptance | servers list: /servers should list all servers
+ok 198 Chrome 75.0 - [266 ms] - Acceptance | servers list: each server should show high-level info of the server
+ok 199 Chrome 75.0 - [258 ms] - Acceptance | servers list: each server should link to the server detail page
+ok 200 Chrome 75.0 - [247 ms] - Acceptance | servers list: when accessing servers is forbidden, show a message with a link to the tokens page
+ok 201 Chrome 75.0 - [398 ms] - Acceptance | task detail: /allocation/:id/:task_name should name the task and list high-level task information
+ok 202 Chrome 75.0 - [2446 ms] - Acceptance | task detail: breadcrumbs match jobs / job / task group / allocation / task
+ok 203 Chrome 75.0 - [422 ms] - Acceptance | task detail: /allocation/:id/:task_name should include resource utilization graphs
+ok 204 Chrome 75.0 - [475 ms] - Acceptance | task detail: the addresses table lists all reserved and dynamic ports
+ok 205 Chrome 75.0 - [443 ms] - Acceptance | task detail: each address row shows the label and value of the address
+ok 206 Chrome 75.0 - [417 ms] - Acceptance | task detail: the events table lists all recent events
+ok 207 Chrome 75.0 - [407 ms] - Acceptance | task detail: each recent event should list the time, type, and description of the event
+ok 208 Chrome 75.0 - [480 ms] - Acceptance | task detail: when the allocation is not found, the application errors
+ok 209 Chrome 75.0 - [458 ms] - Acceptance | task detail: when the allocation is found but the task is not, the application errors
+ok 210 Chrome 75.0 - [464 ms] - Acceptance | task detail: task can be restarted
+ok 211 Chrome 75.0 - [554 ms] - Acceptance | task detail: when task restart fails, an error message is shown
+ok 212 Chrome 75.0 - [477 ms] - Acceptance | task detail (no addresses): when the task has no addresses, the addresses table is not shown
+ok 213 Chrome 75.0 - [2491 ms] - Acceptance | task detail (different namespace): breadcrumbs match jobs / job / task group / allocation / task
+ok 214 Chrome 75.0 - [333 ms] - Acceptance | task detail (not running): when the allocation for a task is not running, the resource utilization graphs are replaced by an empty message
+ok 215 Chrome 75.0 - [513 ms] - Acceptance | task fs: visiting /allocations/:allocation_id/:task_name/fs
+ok 216 Chrome 75.0 - [358 ms] - Acceptance | task fs: when the task is not running, an empty state is shown
+ok 217 Chrome 75.0 - [516 ms] - Acceptance | task fs: visiting /allocations/:allocation_id/:task_name/fs/:path
+not ok 218 Chrome 75.0 - [616 ms] - Acceptance | task fs: navigating allocation filesystem
+    ---
+        actual: >
+            array-🏆.app
+        expected: >
+            bandwidth-💃.txt
+        stack: >
+                at http://localhost:7357/ui/assets/tests.js:2643:16
+                at Object.as (http://localhost:7357/ui/assets/test-support.js:28972:5)
+                at Object.<anonymous> (http://localhost:7357/ui/assets/tests.js:2641:39)
+        message: >
+            assert.equal(file.name, fileRecord.name)
+        negative: >
+            false
+        Log: |
+    ...
+ok 219 Chrome 75.0 - [792 ms] - Acceptance | task fs: sorting allocation filesystem directory
+ok 220 Chrome 75.0 - [1043 ms] - Acceptance | task fs: viewing a file
+    ---
+        Log: |
+            { type: 'error',
+              text:
+               '\'Mirage: Your Ember app tried to GET \\\'//undefined/v1/client/fs/readat/f7f304ed-04f7-40c5-b329-49d0e0808144?limit=50000&offset=0&origin=start&path=task-name%2Fapplication-🖨.txt\\\',\\n         but there was no route defined to handle this request.\\n         Define a route that matches this path in your\\n         mirage/config.js file. Did you forget to add your namespace?\'\n' }
+            { type: 'error',
+              text:
+               '{ description: \'Mirage: undefined\',\n  message:\n   \'Mirage: Your Ember app tried to GET \\\'//undefined/v1/client/fs/readat/f7f304ed-04f7-40c5-b329-49d0e0808144?limit=50000&offset=0&origin=start&path=task-name%2Fapplication-🖨.txt\\\',\\n         but there was no route defined to handle this request.\\n         Define a route that matches this path in your\\n         mirage/config.js file. Did you forget to add your namespace?\',\n  name: \'Error\',\n  stack:\n   \'Mirage: Error: Your Ember app tried to GET \\\'//undefined/v1/client/fs/readat/f7f304ed-04f7-40c5-b329-49d0e0808144?limit=50000&offset=0&origin=start&path=task-name%2Fapplication-🖨.txt\\\',\\n         but there was no route defined to handle this request.\\n         Define a route that matches this path in your\\n         mirage/config.js file. Did you forget to add your namespace?\\n    at new MirageError (http://localhost:7357/ui/assets/vendor.js:141066:21)\\n    at assert (http://localhost:7357/ui/assets/vendor.js:141052:13)\\n    at Pretender.unhandledRequest (http://localhost:7357/ui/assets/vendor.js:146863:29)\\n    at Pretender.handleRequest (webpack://__ember_auto_import__/./node_modules/pretender/pretender.js?:417:14)\\n    at FakeRequest.send (webpack://__ember_auto_import__/./node_modules/pretender/pretender.js?:186:21)\\n    at http://localhost:7357/ui/assets/vendor.js:122479:15\\n    at initializePromise (http://localhost:7357/ui/assets/vendor.js:64217:7)\\n    at new Promise (http://localhost:7357/ui/assets/vendor.js:64697:35)\\n    at fetch (http://localhost:7357/ui/assets/vendor.js:122416:16)\\n    at self.default (http://localhost:7357/ui/assets/vendor.js:122518:27)\' }\n' }
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //undefined/v1/client/fs/readat/f7f304ed-04f7-40c5-b329-49d0e0808144?limit=50000&offset=0&origin=start&path=task-name%2Fapplication-%F0%9F%96%A8.txt\'\n' }
+    ...
+ok 221 Chrome 75.0 - [361 ms] - Acceptance | task fs: viewing an empty directory
+ok 222 Chrome 75.0 - [524 ms] - Acceptance | task fs: viewing paths that produce stat API errors
+ok 223 Chrome 75.0 - [524 ms] - Acceptance | task fs: viewing paths that produce ls API errors
+ok 224 Chrome 75.0 - [1036 ms] - Acceptance | task group detail: /jobs/:id/:task-group should list high-level metrics for the allocation
+ok 225 Chrome 75.0 - [1081 ms] - Acceptance | task group detail: /jobs/:id/:task-group should have breadcrumbs for job and jobs
+ok 226 Chrome 75.0 - [1127 ms] - Acceptance | task group detail: /jobs/:id/:task-group first breadcrumb should link to jobs
+ok 227 Chrome 75.0 - [1804 ms] - Acceptance | task group detail: /jobs/:id/:task-group second breadcrumb should link to the job for the task group
+ok 228 Chrome 75.0 - [2300 ms] - Acceptance | task group detail: /jobs/:id/:task-group should list one page of allocations for the task group
+ok 229 Chrome 75.0 - [1726 ms] - Acceptance | task group detail: each allocation should show basic information about the allocation
+ok 230 Chrome 75.0 - [968 ms] - Acceptance | task group detail: each allocation should show stats about the allocation
+ok 231 Chrome 75.0 - [1272 ms] - Acceptance | task group detail: when the allocation search has no matches, there is an empty message
+ok 232 Chrome 75.0 - [1124 ms] - Acceptance | task group detail: when the allocation has reschedule events, the allocation row is denoted with an icon
+ok 233 Chrome 75.0 - [1057 ms] - Acceptance | task group detail: when the job for the task group is not found, an error message is shown, but the URL persists
+ok 234 Chrome 75.0 - [1077 ms] - Acceptance | task group detail: when the task group is not found on the job, an error message is shown, but the URL persists
+ok 235 Chrome 75.0 - [1206 ms] - Acceptance | task logs: /allocation/:id/:task_name/logs should have a log component
+ok 236 Chrome 75.0 - [1203 ms] - Acceptance | task logs: the stdout log immediately starts streaming
+ok 237 Chrome 75.0 - [372 ms] - Acceptance | tokens: the token form sets the token in local storage
+skip 238 Chrome 75.0 - [0 ms] - Acceptance | tokens: the X-Nomad-Token header gets sent with requests once it is set
+ok 239 Chrome 75.0 - [401 ms] - Acceptance | tokens: an error message is shown when authenticating a token fails
+ok 240 Chrome 75.0 - [455 ms] - Acceptance | tokens: a success message and a special management token message are shown when authenticating succeeds
+ok 241 Chrome 75.0 - [289 ms] - Acceptance | tokens: a success message and associated policies are shown when authenticating succeeds
+ok 242 Chrome 75.0 - [397 ms] - Acceptance | tokens: setting a token clears the store
+ok 243 Chrome 75.0 - [2792 ms] - Integration | Component | allocation row: Allocation row polls for stats, even when it errors or has an invalid response
+ok 244 Chrome 75.0 - [771 ms] - Integration | Component | allocation row: Allocation row shows warning when it requires drivers that are unhealthy on the node it is running on
+ok 245 Chrome 75.0 - [811 ms] - Integration | Component | allocation row: Allocation row shows an icon indicator when it was preempted
+ok 246 Chrome 75.0 - [2475 ms] - Integration | Component | allocation row: when an allocation is not running, the utilization graphs are omitted
+ok 247 Chrome 75.0 - [113 ms] - Integration | Component | app breadcrumbs: breadcrumbs comes from the breadcrumbs service
+ok 248 Chrome 75.0 - [109 ms] - Integration | Component | app breadcrumbs: every breadcrumb is rendered correctly
+ok 249 Chrome 75.0 - [114 ms] - Integration | Component | app breadcrumbs: when breadcrumbs are pending promises, an ellipsis is rendered
+ok 250 Chrome 75.0 - [116 ms] - Integration | Component | attributes table: should render a row for each key/value pair in a deep object
+ok 251 Chrome 75.0 - [109 ms] - Integration | Component | attributes table: should render the full path of key/value pair from the root of the object
+ok 252 Chrome 75.0 - [115 ms] - Integration | Component | attributes table: should render a row for key/value pairs even when the value is another object
+ok 253 Chrome 75.0 - [110 ms] - Integration | Component | copy-button: it shows the copy icon by default
+ok 254 Chrome 75.0 - [124 ms] - Integration | Component | copy-button: it shows the success icon on success and resets afterward
+ok 255 Chrome 75.0 - [127 ms] - Integration | Component | copy-button: it shows the error icon on error
+ok 256 Chrome 75.0 - [109 ms] - Integration | Component | image file: component displays the image
+ok 257 Chrome 75.0 - [117 ms] - Integration | Component | image file: the image is wrapped in an anchor that links directly to the image
+ok 258 Chrome 75.0 - [114 ms] - Integration | Component | image file: component updates image meta when the image loads
+ok 259 Chrome 75.0 - [106 ms] - Integration | Component | image file: component shows the width, height, and size of the image
+ok 260 Chrome 75.0 - [119 ms] - Integration | Component | job diff: job field diffs
+ok 261 Chrome 75.0 - [123 ms] - Integration | Component | job diff: job object diffs
+ok 262 Chrome 75.0 - [204 ms] - Integration | Component | job-editor: the default state is an editor with an explanation popup
+ok 263 Chrome 75.0 - [195 ms] - Integration | Component | job-editor: the explanation popup can be dismissed
+ok 264 Chrome 75.0 - [182 ms] - Integration | Component | job-editor: the explanation popup is not shown once the dismissal state is set in localStorage
+ok 265 Chrome 75.0 - [249 ms] - Integration | Component | job-editor: submitting a json job skips the parse endpoint
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33338>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 266 Chrome 75.0 - [303 ms] - Integration | Component | job-editor: submitting an hcl job requires the parse endpoint
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33387>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 267 Chrome 75.0 - [250 ms] - Integration | Component | job-editor: when a job is successfully parsed and planned, the plan is shown to the user
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33436>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 268 Chrome 75.0 - [267 ms] - Integration | Component | job-editor: from the plan screen, the cancel button goes back to the editor with the job still in tact
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33485>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33529>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 269 Chrome 75.0 - [183 ms] - Integration | Component | job-editor: when parse fails, the parse error message is shown
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33535>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 270 Chrome 75.0 - [334 ms] - Integration | Component | job-editor: when plan fails, the plan error message is shown
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33541>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 271 Chrome 75.0 - [281 ms] - Integration | Component | job-editor: when run fails, the run error message is shown
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33547>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33591>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 272 Chrome 75.0 - [207 ms] - Integration | Component | job-editor: when the scheduler dry-run has warnings, the warnings are shown to the user
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33597>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 273 Chrome 75.0 - [256 ms] - Integration | Component | job-editor: when the scheduler dry-run has no warnings, a success message is shown to the user
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33648>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 274 Chrome 75.0 - [285 ms] - Integration | Component | job-editor: when a job is submitted in the edit context, a POST request is made to the update job endpoint
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33697>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33741>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 275 Chrome 75.0 - [316 ms] - Integration | Component | job-editor: when a job is submitted in the new context, a POST request is made to the create job endpoint
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33747>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33791>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 276 Chrome 75.0 - [265 ms] - Integration | Component | job-editor: when a job is successfully submitted, the onSubmit hook is called
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33797>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+            { type: 'warn',
+              text:
+               '\'DEPRECATION: You called <nomad-ui@component:ivy-codemirror::ember33841>.sendAction("valueUpdated") but Component#sendAction is deprecated. Please use closure actions instead.\'\n' }
+    ...
+ok 277 Chrome 75.0 - [167 ms] - Integration | Component | job-editor: when the job-editor cancelable flag is false, there is no cancel button in the header
+ok 278 Chrome 75.0 - [171 ms] - Integration | Component | job-editor: when the job-editor cancelable flag is true, there is a cancel button in the header
+ok 279 Chrome 75.0 - [223 ms] - Integration | Component | job-editor: when the job-editor cancel button is clicked, the onCancel hook is called
+ok 280 Chrome 75.0 - [135 ms] - Integration | Component | job-page/parts/body: includes a subnav for the job
+ok 281 Chrome 75.0 - [132 ms] - Integration | Component | job-page/parts/body: the subnav includes the deployments link when the job is a service
+ok 282 Chrome 75.0 - [135 ms] - Integration | Component | job-page/parts/body: the subnav does not include the deployments link when the job is not a service
+ok 283 Chrome 75.0 - [132 ms] - Integration | Component | job-page/parts/body: body yields content to a section after the subnav
+ok 284 Chrome 75.0 - [335 ms] - Integration | Component | job-page/parts/children: lists each child
+ok 285 Chrome 75.0 - [1014 ms] - Integration | Component | job-page/parts/children: eventually paginates
+ok 286 Chrome 75.0 - [592 ms] - Integration | Component | job-page/parts/children: is sorted based on the sortProperty and sortDescending properties
+ok 287 Chrome 75.0 - [349 ms] - Integration | Component | job-page/parts/children: gotoJob is called when a job row is clicked
+ok 288 Chrome 75.0 - [206 ms] - Integration | Component | job-page/parts/latest-deployment: there is no latest deployment section when the job has no deployments
+ok 289 Chrome 75.0 - [304 ms] - Integration | Component | job-page/parts/latest-deployment: the latest deployment section shows up for the currently running deployment
+ok 290 Chrome 75.0 - [250 ms] - Integration | Component | job-page/parts/latest-deployment: when there is no running deployment, the latest deployment section shows up for the last deployment
+ok 291 Chrome 75.0 - [993 ms] - Integration | Component | job-page/parts/latest-deployment: the latest deployment section can be expanded to show task groups and allocations
+ok 292 Chrome 75.0 - [926 ms] - Integration | Component | job-page/parts/latest-deployment: each task group in the expanded task group section shows task group details
+ok 293 Chrome 75.0 - [245 ms] - Integration | Component | job-page/parts/placement-failures: when the job has placement failures, they are called out
+ok 294 Chrome 75.0 - [251 ms] - Integration | Component | job-page/parts/placement-failures: when the job has no placement failures, the placement failures section is gone
+ok 295 Chrome 75.0 - [272 ms] - Integration | Component | job-page/parts/summary: jobs with children use the children diagram
+ok 296 Chrome 75.0 - [217 ms] - Integration | Component | job-page/parts/summary: jobs without children use the allocations diagram
+ok 297 Chrome 75.0 - [221 ms] - Integration | Component | job-page/parts/summary: the allocations diagram lists all allocation status figures
+ok 298 Chrome 75.0 - [310 ms] - Integration | Component | job-page/parts/summary: the children diagram lists all children status figures
+ok 299 Chrome 75.0 - [243 ms] - Integration | Component | job-page/parts/summary: the summary block can be collapsed
+ok 300 Chrome 75.0 - [226 ms] - Integration | Component | job-page/parts/summary: when collapsed, the summary block includes an inline version of the chart
+ok 301 Chrome 75.0 - [259 ms] - Integration | Component | job-page/parts/summary: the collapsed/expanded state is persisted to localStorage
+ok 302 Chrome 75.0 - [222 ms] - Integration | Component | job-page/parts/summary: the collapsed/expanded state from localStorage is used for the initial state when available
+ok 303 Chrome 75.0 - [234 ms] - Integration | Component | job-page/parts/task-groups: the job detail page should list all task groups
+ok 304 Chrome 75.0 - [247 ms] - Integration | Component | job-page/parts/task-groups: each row in the task group table should show basic information about the task group
+ok 305 Chrome 75.0 - [249 ms] - Integration | Component | job-page/parts/task-groups: gotoTaskGroup is called when task group rows are clicked
+ok 306 Chrome 75.0 - [479 ms] - Integration | Component | job-page/periodic: Clicking Force Launch launches a new periodic child job
+ok 307 Chrome 75.0 - [352 ms] - Integration | Component | job-page/periodic: Clicking force launch without proper permissions shows an error message
+ok 308 Chrome 75.0 - [300 ms] - Integration | Component | job-page/periodic: Stopping a job sends a delete request for the job
+ok 309 Chrome 75.0 - [278 ms] - Integration | Component | job-page/periodic: Stopping a job without proper permissions shows an error message
+ok 310 Chrome 75.0 - [272 ms] - Integration | Component | job-page/periodic: Starting a job sends a post request for the job using the current definition
+ok 311 Chrome 75.0 - [307 ms] - Integration | Component | job-page/periodic: Starting a job without proper permissions shows an error message
+ok 312 Chrome 75.0 - [313 ms] - Integration | Component | job-page/service: Stopping a job sends a delete request for the job
+ok 313 Chrome 75.0 - [320 ms] - Integration | Component | job-page/service: Stopping a job without proper permissions shows an error message
+ok 314 Chrome 75.0 - [351 ms] - Integration | Component | job-page/service: Starting a job sends a post request for the job using the current definition
+ok 315 Chrome 75.0 - [357 ms] - Integration | Component | job-page/service: Starting a job without proper permissions shows an error message
+ok 316 Chrome 75.0 - [871 ms] - Integration | Component | job-page/service: Recent allocations shows allocations in the job context
+ok 317 Chrome 75.0 - [1315 ms] - Integration | Component | job-page/service: Recent allocations caps out at five
+ok 318 Chrome 75.0 - [293 ms] - Integration | Component | job-page/service: Recent allocations shows an empty message when the job has no allocations
+ok 319 Chrome 75.0 - [288 ms] - Integration | Component | job-page/service: Active deployment can be promoted
+ok 320 Chrome 75.0 - [333 ms] - Integration | Component | job-page/service: When promoting the active deployment fails, an error is shown
+ok 321 Chrome 75.0 - [125 ms] - Integration | Component | list pagination: the source property
+ok 322 Chrome 75.0 - [114 ms] - Integration | Component | list pagination: the size property
+ok 323 Chrome 75.0 - [129 ms] - Integration | Component | list pagination: the spread property
+ok 324 Chrome 75.0 - [124 ms] - Integration | Component | list pagination: page property
+skip 325 Chrome 75.0 - [0 ms] - Integration | Component | list pagination: pagination links link with query params
+ok 326 Chrome 75.0 - [151 ms] - Integration | Component | list pagination: there are no pagination links when source is less than page size
+ok 327 Chrome 75.0 - [119 ms] - Integration | Component | list pagination: when there are no items in source
+ok 328 Chrome 75.0 - [105 ms] - Integration | Component | list pagination: when there is less pages than the total spread amount
+ok 329 Chrome 75.0 - [110 ms] - Integration | Component | list table: component exposes a thead contextual component
+ok 330 Chrome 75.0 - [113 ms] - Integration | Component | list table: component exposes a tbody contextual component
+skip 331 Chrome 75.0 - [0 ms] - Integration | Component | list table: sort-by creates links using the appropriate links given sort property and sort descending
+ok 332 Chrome 75.0 - [137 ms] - Integration | Component | multi-select dropdown: component is initially closed
+ok 333 Chrome 75.0 - [143 ms] - Integration | Component | multi-select dropdown: component opens the options dropdown when clicked
+ok 334 Chrome 75.0 - [136 ms] - Integration | Component | multi-select dropdown: all options are shown in the options dropdown, each with a checkbox input
+ok 335 Chrome 75.0 - [135 ms] - Integration | Component | multi-select dropdown: onSelect gets called when an option is clicked
+ok 336 Chrome 75.0 - [112 ms] - Integration | Component | multi-select dropdown: the component trigger shows the selection count when there is a selection
+ok 337 Chrome 75.0 - [136 ms] - Integration | Component | multi-select dropdown: pressing DOWN when the trigger has focus opens the options list
+ok 338 Chrome 75.0 - [148 ms] - Integration | Component | multi-select dropdown: pressing DOWN when the trigger has focus and the options list is open focuses the first option
+ok 339 Chrome 75.0 - [151 ms] - Integration | Component | multi-select dropdown: pressing TAB when the trigger has focus and the options list is open focuses the first option
+ok 340 Chrome 75.0 - [153 ms] - Integration | Component | multi-select dropdown: pressing UP when the first list option is focused does nothing
+ok 341 Chrome 75.0 - [147 ms] - Integration | Component | multi-select dropdown: pressing DOWN when the a list option is focused moves focus to the next list option
+ok 342 Chrome 75.0 - [242 ms] - Integration | Component | multi-select dropdown: pressing DOWN when the last list option has focus does nothing
+ok 343 Chrome 75.0 - [142 ms] - Integration | Component | multi-select dropdown: onSelect gets called when pressing SPACE when a list option is focused
+ok 344 Chrome 75.0 - [134 ms] - Integration | Component | multi-select dropdown: list options have a positive tabindex and are therefore sequentially navigable
+ok 345 Chrome 75.0 - [121 ms] - Integration | Component | multi-select dropdown: the checkboxes inside list options have a negative tabindex and are therefore not sequentially navigable
+ok 346 Chrome 75.0 - [167 ms] - Integration | Component | multi-select dropdown: pressing ESC when the options list is open closes the list and returns focus to the dropdown trigger
+ok 347 Chrome 75.0 - [120 ms] - Integration | Component | multi-select dropdown: when there are no list options, an empty message is shown
+ok 348 Chrome 75.0 - [193 ms] - Integration | Component | page layout: the global-header hamburger menu opens the gutter menu
+ok 349 Chrome 75.0 - [184 ms] - Integration | Component | page layout: the gutter-menu hamburger menu closes the gutter menu
+ok 350 Chrome 75.0 - [197 ms] - Integration | Component | page layout: the gutter-menu backdrop closes the gutter menu
+ok 351 Chrome 75.0 - [105 ms] - Integration | Component | placement failures: should render the placement failure (basic render)
+ok 352 Chrome 75.0 - [106 ms] - Integration | Component | placement failures: should render correctly when a node is not evaluated
+ok 353 Chrome 75.0 - [292 ms] - Integration | Component | primary metric: Contains a line chart, a percentage bar, a percentage figure, and an absolute usage figure
+ok 354 Chrome 75.0 - [259 ms] - Integration | Component | primary metric: The CPU metric maps to is-info
+ok 355 Chrome 75.0 - [260 ms] - Integration | Component | primary metric: The Memory metric maps to is-danger
+ok 356 Chrome 75.0 - [261 ms] - Integration | Component | primary metric: Gets the tracker from the tracker registry
+ok 357 Chrome 75.0 - [273 ms] - Integration | Component | primary metric: Immediately polls the tracker
+ok 358 Chrome 75.0 - [278 ms] - Integration | Component | primary metric: A pause signal is sent to the tracker when the component is destroyed
+ok 359 Chrome 75.0 - [403 ms] - Integration | Component | reschedule event timeline: when the allocation is running, the timeline shows past allocations
+ok 360 Chrome 75.0 - [324 ms] - Integration | Component | reschedule event timeline: when the allocation has failed and there is a follow up evaluation, a note with a time is shown
+ok 361 Chrome 75.0 - [315 ms] - Integration | Component | reschedule event timeline: when the allocation has failed and there is no follow up evaluation, a warning is shown
+ok 362 Chrome 75.0 - [300 ms] - Integration | Component | reschedule event timeline: when the allocation has a next allocation already, it is shown in the timeline
+ok 363 Chrome 75.0 - [119 ms] - Integration | Component | streaming file: when mode is `head`, the logger signals head
+ok 364 Chrome 75.0 - [119 ms] - Integration | Component | streaming file: when mode is `tail`, the logger signals tail
+ok 365 Chrome 75.0 - [619 ms] - Integration | Component | streaming file: when mode is `streaming` and `isStreaming` is true, streaming starts
+ok 366 Chrome 75.0 - [118 ms] - Integration | Component | task file: When a file is text-based, the file mode is streaming
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //1.1.1.1:1111/v1/client/fs/cat/alloc-1?limit=50000&offset=0&origin=start&path=task-name%2Fpath%2Fto%2Ffile\'\n' }
+    ...
+ok 367 Chrome 75.0 - [108 ms] - Integration | Component | task file: When a file is an image, the file mode is image
+ok 368 Chrome 75.0 - [115 ms] - Integration | Component | task file: When the file is neither text-based or an image, the unsupported file type empty state is shown
+ok 369 Chrome 75.0 - [122 ms] - Integration | Component | task file: The unsupported file type empty state includes a link to the raw file
+ok 370 Chrome 75.0 - [118 ms] - Integration | Component | task file: The view raw button goes to the correct API url
+ok 371 Chrome 75.0 - [139 ms] - Integration | Component | task file: The head and tail buttons are not shown when the file is small
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //1.1.1.1:1111/v1/client/fs/cat/alloc-1?limit=50000&offset=0&origin=start&path=task-name%2Fpath%2Fto%2Ffile\'\n' }
+    ...
+ok 372 Chrome 75.0 - [116 ms] - Integration | Component | task file: The  head and tail buttons are not shown for an image file
+ok 373 Chrome 75.0 - [121 ms] - Integration | Component | task file: Yielded content goes in the top-left header area
+ok 374 Chrome 75.0 - [119 ms] - Integration | Component | task file: The body is full-bleed and dark when the file is streaming
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //1.1.1.1:1111/v1/client/fs/cat/alloc-1?limit=50000&offset=0&origin=start&path=task-name%2Fpath%2Fto%2Ffile\'\n' }
+    ...
+ok 375 Chrome 75.0 - [132 ms] - Integration | Component | task file: The body has padding and a light background when the file is not streaming
+ok 376 Chrome 75.0 - [321 ms] - Integration | Component | task log: Basic appearance
+ok 377 Chrome 75.0 - [311 ms] - Integration | Component | task log: Streaming starts on creation
+ok 378 Chrome 75.0 - [323 ms] - Integration | Component | task log: Clicking Head loads the log head
+ok 379 Chrome 75.0 - [335 ms] - Integration | Component | task log: Clicking Tail loads the log tail
+ok 380 Chrome 75.0 - [1318 ms] - Integration | Component | task log: Clicking toggleStream starts and stops the log stream
+ok 381 Chrome 75.0 - [496 ms] - Integration | Component | task log: Clicking stderr switches the log to standard error
+ok 382 Chrome 75.0 - [319 ms] - Integration | Component | task log: When the client is inaccessible, task-log falls back to requesting logs through the server
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //1.1.1.1:1111/v1/client/fs/logs/alloc-1?offset=50000&origin=end&task=task-name&type=stdout\'\n' }
+    ...
+ok 383 Chrome 75.0 - [609 ms] - Integration | Component | task log: When both the client and the server are inaccessible, an error message is shown
+    ---
+        Log: |
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to //1.1.1.1:1111/v1/client/fs/logs/alloc-1?offset=50000&origin=end&task=task-name&type=stdout\'\n' }
+            { type: 'warn',
+              text:
+               '\'LOG FETCH: Couldn\\\'t connect to /v1/client/fs/logs/alloc-1?offset=50000&origin=end&task=task-name&type=stdout\'\n' }
+    ...
+ok 384 Chrome 75.0 - [126 ms] - Integration | Component | two step button: presents as a button in the idle state
+ok 385 Chrome 75.0 - [128 ms] - Integration | Component | two step button: clicking the idle state button transitions into the promptForConfirmation state
+ok 386 Chrome 75.0 - [145 ms] - Integration | Component | two step button: canceling in the promptForConfirmation state calls the onCancel hook and resets to the idle state
+ok 387 Chrome 75.0 - [131 ms] - Integration | Component | two step button: confirming the promptForConfirmation state calls the onConfirm hook and resets to the idle state
+ok 388 Chrome 75.0 - [134 ms] - Integration | Component | two step button: when awaitingConfirmation is true, the cancel and submit buttons are disabled and the submit button is loading
+ok 389 Chrome 75.0 - [141 ms] - Integration | Component | two step button: when in the prompt state, clicking outside will reset state back to idle
+ok 390 Chrome 75.0 - [136 ms] - Integration | Component | two step button: when in the prompt state, clicking inside will not reset state back to idle
+ok 391 Chrome 75.0 - [134 ms] - Integration | Component | two step button: when awaitingConfirmation is true, clicking outside does nothing
+ok 392 Chrome 75.0 - [120 ms] - Integration | Component | two step button: when disabled is true, the idle button is disabled
+ok 393 Chrome 75.0 - [0 ms] - ESLint | app: adapters/agent.js
+ok 394 Chrome 75.0 - [0 ms] - ESLint | app: adapters/allocation.js
+ok 395 Chrome 75.0 - [0 ms] - ESLint | app: adapters/application.js
+ok 396 Chrome 75.0 - [0 ms] - ESLint | app: adapters/deployment.js
+ok 397 Chrome 75.0 - [1 ms] - ESLint | app: adapters/job-summary.js
+ok 398 Chrome 75.0 - [0 ms] - ESLint | app: adapters/job.js
+ok 399 Chrome 75.0 - [1 ms] - ESLint | app: adapters/namespace.js
+ok 400 Chrome 75.0 - [0 ms] - ESLint | app: adapters/node.js
+ok 401 Chrome 75.0 - [0 ms] - ESLint | app: adapters/policy.js
+ok 402 Chrome 75.0 - [0 ms] - ESLint | app: adapters/task-state.js
+ok 403 Chrome 75.0 - [0 ms] - ESLint | app: adapters/token.js
+ok 404 Chrome 75.0 - [1 ms] - ESLint | app: adapters/watchable.js
+ok 405 Chrome 75.0 - [0 ms] - ESLint | app: app.js
+ok 406 Chrome 75.0 - [1 ms] - ESLint | app: breakpoints.js
+ok 407 Chrome 75.0 - [0 ms] - ESLint | app: components/addon-copy-button.js
+ok 408 Chrome 75.0 - [0 ms] - ESLint | app: components/allocation-row.js
+ok 409 Chrome 75.0 - [0 ms] - ESLint | app: components/allocation-status-bar.js
+ok 410 Chrome 75.0 - [1 ms] - ESLint | app: components/app-breadcrumbs.js
+ok 411 Chrome 75.0 - [1 ms] - ESLint | app: components/attributes-section.js
+ok 412 Chrome 75.0 - [0 ms] - ESLint | app: components/children-status-bar.js
+ok 413 Chrome 75.0 - [0 ms] - ESLint | app: components/client-node-row.js
+ok 414 Chrome 75.0 - [0 ms] - ESLint | app: components/copy-button.js
+ok 415 Chrome 75.0 - [0 ms] - ESLint | app: components/distribution-bar.js
+ok 416 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-accordion.js
+ok 417 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-boxed-section.js
+ok 418 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-colors.js
+ok 419 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-diff-viewer.js
+ok 420 Chrome 75.0 - [1 ms] - ESLint | app: components/freestyle/sg-distribution-bar-jumbo.js
+ok 421 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-distribution-bar.js
+ok 422 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-dropdown.js
+ok 423 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-json-viewer.js
+ok 424 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-line-chart.js
+ok 425 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-log-stream.js
+ok 426 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-multi-select-dropdown.js
+ok 427 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-progress-bar.js
+ok 428 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-stats-time-series.js
+ok 429 Chrome 75.0 - [1 ms] - ESLint | app: components/freestyle/sg-table-configuration.js
+ok 430 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-table.js
+ok 431 Chrome 75.0 - [0 ms] - ESLint | app: components/freestyle/sg-timeline.js
+ok 432 Chrome 75.0 - [0 ms] - ESLint | app: components/fs-directory-entry.js
+ok 433 Chrome 75.0 - [0 ms] - ESLint | app: components/global-header.js
+ok 434 Chrome 75.0 - [0 ms] - ESLint | app: components/gutter-menu.js
+ok 435 Chrome 75.0 - [0 ms] - ESLint | app: components/image-file.js
+ok 436 Chrome 75.0 - [0 ms] - ESLint | app: components/job-deployment.js
+ok 437 Chrome 75.0 - [0 ms] - ESLint | app: components/job-deployment/deployment-metrics.js
+ok 438 Chrome 75.0 - [1 ms] - ESLint | app: components/job-deployments-stream.js
+ok 439 Chrome 75.0 - [0 ms] - ESLint | app: components/job-diff-fields-and-objects.js
+ok 440 Chrome 75.0 - [1 ms] - ESLint | app: components/job-diff.js
+ok 441 Chrome 75.0 - [0 ms] - ESLint | app: components/job-editor.js
+ok 442 Chrome 75.0 - [1 ms] - ESLint | app: components/job-page/abstract.js
+ok 443 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/batch.js
+ok 444 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parameterized-child.js
+ok 445 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parameterized.js
+ok 446 Chrome 75.0 - [1 ms] - ESLint | app: components/job-page/parts/children.js
+ok 447 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parts/error.js
+ok 448 Chrome 75.0 - [1 ms] - ESLint | app: components/job-page/parts/latest-deployment.js
+ok 449 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parts/placement-failures.js
+ok 450 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parts/recent-allocations.js
+ok 451 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parts/summary.js
+ok 452 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/parts/task-groups.js
+ok 453 Chrome 75.0 - [1 ms] - ESLint | app: components/job-page/parts/title.js
+ok 454 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/periodic-child.js
+ok 455 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/periodic.js
+ok 456 Chrome 75.0 - [1 ms] - ESLint | app: components/job-page/service.js
+ok 457 Chrome 75.0 - [0 ms] - ESLint | app: components/job-page/system.js
+ok 458 Chrome 75.0 - [0 ms] - ESLint | app: components/job-row.js
+ok 459 Chrome 75.0 - [0 ms] - ESLint | app: components/job-version.js
+ok 460 Chrome 75.0 - [1 ms] - ESLint | app: components/job-versions-stream.js
+ok 461 Chrome 75.0 - [1 ms] - ESLint | app: components/json-viewer.js
+ok 462 Chrome 75.0 - [0 ms] - ESLint | app: components/line-chart.js
+ok 463 Chrome 75.0 - [0 ms] - ESLint | app: components/list-accordion.js
+ok 464 Chrome 75.0 - [1 ms] - ESLint | app: components/list-accordion/accordion-body.js
+ok 465 Chrome 75.0 - [0 ms] - ESLint | app: components/list-accordion/accordion-head.js
+ok 466 Chrome 75.0 - [0 ms] - ESLint | app: components/list-pagination.js
+ok 467 Chrome 75.0 - [1 ms] - ESLint | app: components/list-pagination/list-pager.js
+ok 468 Chrome 75.0 - [0 ms] - ESLint | app: components/list-table.js
+ok 469 Chrome 75.0 - [0 ms] - ESLint | app: components/list-table/sort-by.js
+ok 470 Chrome 75.0 - [0 ms] - ESLint | app: components/list-table/table-body.js
+ok 471 Chrome 75.0 - [1 ms] - ESLint | app: components/list-table/table-head.js
+ok 472 Chrome 75.0 - [0 ms] - ESLint | app: components/multi-select-dropdown.js
+ok 473 Chrome 75.0 - [1 ms] - ESLint | app: components/page-layout.js
+ok 474 Chrome 75.0 - [0 ms] - ESLint | app: components/placement-failure.js
+ok 475 Chrome 75.0 - [1 ms] - ESLint | app: components/primary-metric.js
+ok 476 Chrome 75.0 - [0 ms] - ESLint | app: components/region-switcher.js
+ok 477 Chrome 75.0 - [0 ms] - ESLint | app: components/reschedule-event-row.js
+ok 478 Chrome 75.0 - [0 ms] - ESLint | app: components/search-box.js
+ok 479 Chrome 75.0 - [0 ms] - ESLint | app: components/server-agent-row.js
+ok 480 Chrome 75.0 - [0 ms] - ESLint | app: components/stats-time-series.js
+ok 481 Chrome 75.0 - [0 ms] - ESLint | app: components/streaming-file.js
+ok 482 Chrome 75.0 - [0 ms] - ESLint | app: components/task-file.js
+ok 483 Chrome 75.0 - [0 ms] - ESLint | app: components/task-group-row.js
+ok 484 Chrome 75.0 - [1 ms] - ESLint | app: components/task-log.js
+ok 485 Chrome 75.0 - [0 ms] - ESLint | app: components/task-row.js
+ok 486 Chrome 75.0 - [1 ms] - ESLint | app: components/task-subnav.js
+ok 487 Chrome 75.0 - [0 ms] - ESLint | app: components/two-step-button.js
+ok 488 Chrome 75.0 - [0 ms] - ESLint | app: controllers/allocations/allocation/index.js
+ok 489 Chrome 75.0 - [0 ms] - ESLint | app: controllers/allocations/allocation/task/fs-root.js
+ok 490 Chrome 75.0 - [0 ms] - ESLint | app: controllers/allocations/allocation/task/fs.js
+ok 491 Chrome 75.0 - [0 ms] - ESLint | app: controllers/allocations/allocation/task/index.js
+ok 492 Chrome 75.0 - [0 ms] - ESLint | app: controllers/application.js
+ok 493 Chrome 75.0 - [0 ms] - ESLint | app: controllers/clients.js
+ok 494 Chrome 75.0 - [0 ms] - ESLint | app: controllers/clients/client.js
+ok 495 Chrome 75.0 - [1 ms] - ESLint | app: controllers/clients/index.js
+ok 496 Chrome 75.0 - [0 ms] - ESLint | app: controllers/freestyle.js
+ok 497 Chrome 75.0 - [1 ms] - ESLint | app: controllers/jobs.js
+ok 498 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/index.js
+ok 499 Chrome 75.0 - [1 ms] - ESLint | app: controllers/jobs/job/allocations.js
+ok 500 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/job/definition.js
+ok 501 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/job/deployments.js
+ok 502 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/job/evaluations.js
+ok 503 Chrome 75.0 - [1 ms] - ESLint | app: controllers/jobs/job/index.js
+ok 504 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/job/task-group.js
+ok 505 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/job/versions.js
+ok 506 Chrome 75.0 - [0 ms] - ESLint | app: controllers/jobs/run.js
+ok 507 Chrome 75.0 - [0 ms] - ESLint | app: controllers/servers.js
+ok 508 Chrome 75.0 - [1 ms] - ESLint | app: controllers/servers/index.js
+ok 509 Chrome 75.0 - [0 ms] - ESLint | app: controllers/servers/server.js
+ok 510 Chrome 75.0 - [1 ms] - ESLint | app: controllers/settings/tokens.js
+ok 511 Chrome 75.0 - [0 ms] - ESLint | app: helpers/css-class.js
+ok 512 Chrome 75.0 - [1 ms] - ESLint | app: helpers/format-bytes.js
+ok 513 Chrome 75.0 - [0 ms] - ESLint | app: helpers/format-date.js
+ok 514 Chrome 75.0 - [0 ms] - ESLint | app: helpers/format-duration.js
+ok 515 Chrome 75.0 - [0 ms] - ESLint | app: helpers/format-month-ts.js
+ok 516 Chrome 75.0 - [0 ms] - ESLint | app: helpers/format-percentage.js
+ok 517 Chrome 75.0 - [0 ms] - ESLint | app: helpers/format-ts.js
+ok 518 Chrome 75.0 - [0 ms] - ESLint | app: helpers/is-object.js
+ok 519 Chrome 75.0 - [0 ms] - ESLint | app: helpers/lazy-click.js
+ok 520 Chrome 75.0 - [0 ms] - ESLint | app: helpers/pluralize.js
+ok 521 Chrome 75.0 - [0 ms] - ESLint | app: helpers/x-icon.js
+ok 522 Chrome 75.0 - [0 ms] - ESLint | app: initializers/app-env.js
+ok 523 Chrome 75.0 - [0 ms] - ESLint | app: initializers/app-token.js
+ok 524 Chrome 75.0 - [0 ms] - ESLint | app: initializers/fragment-serializer.js
+ok 525 Chrome 75.0 - [0 ms] - ESLint | app: mixins/searchable.js
+ok 526 Chrome 75.0 - [1 ms] - ESLint | app: mixins/sortable.js
+ok 527 Chrome 75.0 - [0 ms] - ESLint | app: mixins/window-resizable.js
+ok 528 Chrome 75.0 - [0 ms] - ESLint | app: mixins/with-component-visibility-detection.js
+ok 529 Chrome 75.0 - [0 ms] - ESLint | app: mixins/with-forbidden-state.js
+ok 530 Chrome 75.0 - [0 ms] - ESLint | app: mixins/with-model-error-handling.js
+ok 531 Chrome 75.0 - [1 ms] - ESLint | app: mixins/with-namespace-resetting.js
+ok 532 Chrome 75.0 - [0 ms] - ESLint | app: mixins/with-route-visibility-detection.js
+ok 533 Chrome 75.0 - [0 ms] - ESLint | app: mixins/with-watchers.js
+ok 534 Chrome 75.0 - [1 ms] - ESLint | app: models/agent.js
+ok 535 Chrome 75.0 - [0 ms] - ESLint | app: models/allocation.js
+ok 536 Chrome 75.0 - [0 ms] - ESLint | app: models/deployment.js
+ok 537 Chrome 75.0 - [0 ms] - ESLint | app: models/drain-strategy.js
+ok 538 Chrome 75.0 - [0 ms] - ESLint | app: models/evaluation.js
+ok 539 Chrome 75.0 - [1 ms] - ESLint | app: models/job-plan.js
+ok 540 Chrome 75.0 - [0 ms] - ESLint | app: models/job-summary.js
+ok 541 Chrome 75.0 - [1 ms] - ESLint | app: models/job-version.js
+ok 542 Chrome 75.0 - [0 ms] - ESLint | app: models/job.js
+ok 543 Chrome 75.0 - [0 ms] - ESLint | app: models/namespace.js
+ok 544 Chrome 75.0 - [0 ms] - ESLint | app: models/network.js
+ok 545 Chrome 75.0 - [0 ms] - ESLint | app: models/node-attributes.js
+ok 546 Chrome 75.0 - [0 ms] - ESLint | app: models/node-driver.js
+ok 547 Chrome 75.0 - [0 ms] - ESLint | app: models/node-event.js
+ok 548 Chrome 75.0 - [0 ms] - ESLint | app: models/node.js
+ok 549 Chrome 75.0 - [0 ms] - ESLint | app: models/placement-failure.js
+ok 550 Chrome 75.0 - [0 ms] - ESLint | app: models/policy.js
+ok 551 Chrome 75.0 - [1 ms] - ESLint | app: models/reschedule-event.js
+ok 552 Chrome 75.0 - [0 ms] - ESLint | app: models/resources.js
+ok 553 Chrome 75.0 - [1 ms] - ESLint | app: models/task-event.js
+ok 554 Chrome 75.0 - [0 ms] - ESLint | app: models/task-group-deployment-summary.js
+ok 555 Chrome 75.0 - [0 ms] - ESLint | app: models/task-group-summary.js
+ok 556 Chrome 75.0 - [1 ms] - ESLint | app: models/task-group.js
+ok 557 Chrome 75.0 - [0 ms] - ESLint | app: models/task-state.js
+ok 558 Chrome 75.0 - [1 ms] - ESLint | app: models/task.js
+ok 559 Chrome 75.0 - [0 ms] - ESLint | app: models/token.js
+ok 560 Chrome 75.0 - [0 ms] - ESLint | app: resolver.js
+ok 561 Chrome 75.0 - [0 ms] - ESLint | app: router.js
+ok 562 Chrome 75.0 - [0 ms] - ESLint | app: routes/allocations/allocation.js
+ok 563 Chrome 75.0 - [0 ms] - ESLint | app: routes/allocations/allocation/index.js
+ok 564 Chrome 75.0 - [0 ms] - ESLint | app: routes/allocations/allocation/task.js
+ok 565 Chrome 75.0 - [0 ms] - ESLint | app: routes/allocations/allocation/task/fs-root.js
+ok 566 Chrome 75.0 - [0 ms] - ESLint | app: routes/allocations/allocation/task/fs.js
+ok 567 Chrome 75.0 - [1 ms] - ESLint | app: routes/allocations/allocation/task/logs.js
+ok 568 Chrome 75.0 - [0 ms] - ESLint | app: routes/application.js
+ok 569 Chrome 75.0 - [0 ms] - ESLint | app: routes/clients.js
+ok 570 Chrome 75.0 - [0 ms] - ESLint | app: routes/clients/client.js
+ok 571 Chrome 75.0 - [0 ms] - ESLint | app: routes/clients/index.js
+ok 572 Chrome 75.0 - [1 ms] - ESLint | app: routes/freestyle.js
+ok 573 Chrome 75.0 - [0 ms] - ESLint | app: routes/index.js
+ok 574 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs.js
+ok 575 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/index.js
+ok 576 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job.js
+ok 577 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/allocations.js
+ok 578 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/definition.js
+ok 579 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/deployments.js
+ok 580 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/evaluations.js
+ok 581 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/index.js
+ok 582 Chrome 75.0 - [1 ms] - ESLint | app: routes/jobs/job/task-group.js
+ok 583 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/job/versions.js
+ok 584 Chrome 75.0 - [0 ms] - ESLint | app: routes/jobs/run.js
+ok 585 Chrome 75.0 - [0 ms] - ESLint | app: routes/not-found.js
+ok 586 Chrome 75.0 - [0 ms] - ESLint | app: routes/servers.js
+ok 587 Chrome 75.0 - [1 ms] - ESLint | app: routes/servers/server.js
+ok 588 Chrome 75.0 - [0 ms] - ESLint | app: serializers/agent.js
+ok 589 Chrome 75.0 - [0 ms] - ESLint | app: serializers/allocation.js
+ok 590 Chrome 75.0 - [0 ms] - ESLint | app: serializers/application.js
+ok 591 Chrome 75.0 - [1 ms] - ESLint | app: serializers/deployment.js
+ok 592 Chrome 75.0 - [0 ms] - ESLint | app: serializers/drain-strategy.js
+ok 593 Chrome 75.0 - [0 ms] - ESLint | app: serializers/evaluation.js
+ok 594 Chrome 75.0 - [1 ms] - ESLint | app: serializers/fragment.js
+ok 595 Chrome 75.0 - [0 ms] - ESLint | app: serializers/job-plan.js
+ok 596 Chrome 75.0 - [0 ms] - ESLint | app: serializers/job-summary.js
+ok 597 Chrome 75.0 - [0 ms] - ESLint | app: serializers/job-version.js
+ok 598 Chrome 75.0 - [0 ms] - ESLint | app: serializers/job.js
+ok 599 Chrome 75.0 - [0 ms] - ESLint | app: serializers/namespace.js
+ok 600 Chrome 75.0 - [1 ms] - ESLint | app: serializers/network.js
+ok 601 Chrome 75.0 - [0 ms] - ESLint | app: serializers/node-attributes.js
+ok 602 Chrome 75.0 - [0 ms] - ESLint | app: serializers/node-event.js
+ok 603 Chrome 75.0 - [0 ms] - ESLint | app: serializers/node.js
+ok 604 Chrome 75.0 - [0 ms] - ESLint | app: serializers/policy.js
+ok 605 Chrome 75.0 - [1 ms] - ESLint | app: serializers/reschedule-event.js
+ok 606 Chrome 75.0 - [0 ms] - ESLint | app: serializers/resources.js
+ok 607 Chrome 75.0 - [1 ms] - ESLint | app: serializers/task-event.js
+ok 608 Chrome 75.0 - [0 ms] - ESLint | app: serializers/task-group-deployment-summary.js
+ok 609 Chrome 75.0 - [0 ms] - ESLint | app: serializers/task-group.js
+ok 610 Chrome 75.0 - [0 ms] - ESLint | app: serializers/task-state.js
+ok 611 Chrome 75.0 - [0 ms] - ESLint | app: serializers/task.js
+ok 612 Chrome 75.0 - [1 ms] - ESLint | app: serializers/token.js
+ok 613 Chrome 75.0 - [0 ms] - ESLint | app: services/breadcrumbs.js
+ok 614 Chrome 75.0 - [0 ms] - ESLint | app: services/config.js
+ok 615 Chrome 75.0 - [0 ms] - ESLint | app: services/ember-freestyle.js
+ok 616 Chrome 75.0 - [0 ms] - ESLint | app: services/stats-trackers-registry.js
+ok 617 Chrome 75.0 - [1 ms] - ESLint | app: services/system.js
+ok 618 Chrome 75.0 - [0 ms] - ESLint | app: services/token.js
+ok 619 Chrome 75.0 - [0 ms] - ESLint | app: services/watch-list.js
+ok 620 Chrome 75.0 - [0 ms] - ESLint | app: utils/add-to-path.js
+ok 621 Chrome 75.0 - [1 ms] - ESLint | app: utils/breadcrumb-utils.js
+ok 622 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/abstract-logger.js
+ok 623 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/abstract-stats-tracker.js
+ok 624 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/allocation-stats-tracker.js
+ok 625 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/log.js
+ok 626 Chrome 75.0 - [1 ms] - ESLint | app: utils/classes/node-stats-tracker.js
+ok 627 Chrome 75.0 - [1 ms] - ESLint | app: utils/classes/poll-logger.js
+ok 628 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/promise-array.js
+ok 629 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/promise-object.js
+ok 630 Chrome 75.0 - [1 ms] - ESLint | app: utils/classes/query-params.js
+ok 631 Chrome 75.0 - [2 ms] - ESLint | app: utils/classes/rolling-array.js
+ok 632 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/stream-logger.js
+ok 633 Chrome 75.0 - [0 ms] - ESLint | app: utils/classes/text-decoder.js
+ok 634 Chrome 75.0 - [1 ms] - ESLint | app: utils/classes/xhr-token.js
+ok 635 Chrome 75.0 - [1 ms] - ESLint | app: utils/codes-for-error.js
+ok 636 Chrome 75.0 - [0 ms] - ESLint | app: utils/fetch.js
+ok 637 Chrome 75.0 - [0 ms] - ESLint | app: utils/format-duration.js
+ok 638 Chrome 75.0 - [0 ms] - ESLint | app: utils/ip-parts.js
+ok 639 Chrome 75.0 - [1 ms] - ESLint | app: utils/json-with-default.js
+ok 640 Chrome 75.0 - [0 ms] - ESLint | app: utils/message-from-adapter-error.js
+ok 641 Chrome 75.0 - [1 ms] - ESLint | app: utils/no-leader-error.js
+ok 642 Chrome 75.0 - [1 ms] - ESLint | app: utils/notify-error.js
+ok 643 Chrome 75.0 - [0 ms] - ESLint | app: utils/notify-forbidden.js
+ok 644 Chrome 75.0 - [0 ms] - ESLint | app: utils/properties/local-storage.js
+ok 645 Chrome 75.0 - [1 ms] - ESLint | app: utils/properties/short-uuid.js
+ok 646 Chrome 75.0 - [0 ms] - ESLint | app: utils/properties/style-string.js
+ok 647 Chrome 75.0 - [1 ms] - ESLint | app: utils/properties/sum-aggregation.js
+ok 648 Chrome 75.0 - [0 ms] - ESLint | app: utils/properties/watch.js
+ok 649 Chrome 75.0 - [0 ms] - ESLint | app: utils/qp-serialize.js
+ok 650 Chrome 75.0 - [0 ms] - ESLint | app: utils/remove-record.js
+ok 651 Chrome 75.0 - [1 ms] - ESLint | app: utils/stream-frames.js
+ok 652 Chrome 75.0 - [1 ms] - ESLint | app: utils/styleguide/product-metadata.js
+ok 653 Chrome 75.0 - [1 ms] - ESLint | app: utils/timeout.js
+ok 654 Chrome 75.0 - [1 ms] - ESLint | app: utils/wait.js
+ok 655 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/allocations.hbs
+ok 656 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/allocations/allocation.hbs
+ok 657 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/allocations/allocation/index.hbs
+ok 658 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/allocations/allocation/task.hbs
+ok 659 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/allocations/allocation/task/fs.hbs
+ok 660 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/allocations/allocation/task/index.hbs
+ok 661 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/allocations/allocation/task/logs.hbs
+ok 662 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/application.hbs
+ok 663 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/clients.hbs
+ok 664 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/clients/client.hbs
+ok 665 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/clients/index.hbs
+ok 666 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/clients/loading.hbs
+ok 667 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/allocation-row.hbs
+ok 668 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/app-breadcrumbs.hbs
+ok 669 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/attributes-section.hbs
+ok 670 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/attributes-table.hbs
+ok 671 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/client-node-row.hbs
+ok 672 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/copy-button.hbs
+ok 673 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/distribution-bar.hbs
+ok 674 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-accordion.hbs
+ok 675 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-alerts.hbs
+ok 676 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-boxed-section.hbs
+ok 677 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-breadcrumbs.hbs
+ok 678 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-buttons.hbs
+ok 679 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-colors.hbs
+ok 680 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-copy-button.hbs
+ok 681 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-diff-viewer.hbs
+ok 682 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-distribution-bar-jumbo.hbs
+ok 683 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-distribution-bar.hbs
+ok 684 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-dropdown.hbs
+ok 685 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-font-sizing.hbs
+ok 686 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-font-stacks.hbs
+ok 687 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-gutter-menu.hbs
+ok 688 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-header.hbs
+ok 689 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-inline-definitions.hbs
+ok 690 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-json-viewer.hbs
+ok 691 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-line-chart.hbs
+ok 692 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-log-stream.hbs
+ok 693 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-metrics.hbs
+ok 694 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-multi-select-dropdown.hbs
+ok 695 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-page-tabs.hbs
+ok 696 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-page-title.hbs
+ok 697 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-progress-bar.hbs
+ok 698 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-search-box.hbs
+ok 699 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-stats-time-series.hbs
+ok 700 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-table-configuration.hbs
+ok 701 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-table.hbs
+ok 702 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-timeline.hbs
+ok 703 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/freestyle/sg-two-step-button.hbs
+ok 704 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/fs-directory-entry.hbs
+ok 705 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/global-header.hbs
+ok 706 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/gutter-menu.hbs
+ok 707 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/image-file.hbs
+ok 708 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-deployment-details.hbs
+ok 709 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-deployment.hbs
+ok 710 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-deployment/deployment-allocations.hbs
+ok 711 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-deployment/deployment-metrics.hbs
+ok 712 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-deployment/task-groups.hbs
+ok 713 Chrome 75.0 - [6 ms] - TemplateLint: nomad-ui/templates/components/job-deployments-stream.hbs
+ok 714 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-diff-fields-and-objects.hbs
+ok 715 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-diff.hbs
+ok 716 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-editor.hbs
+ok 717 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/batch.hbs
+ok 718 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parameterized-child.hbs
+ok 719 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parameterized.hbs
+ok 720 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/body.hbs
+ok 721 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/children.hbs
+ok 722 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/error.hbs
+ok 723 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/latest-deployment.hbs
+ok 724 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/placement-failures.hbs
+ok 725 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/recent-allocations.hbs
+ok 726 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/summary.hbs
+ok 727 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/task-groups.hbs
+ok 728 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/parts/title.hbs
+ok 729 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-page/periodic-child.hbs
+ok 730 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/periodic.hbs
+ok 731 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/service.hbs
+ok 732 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-page/system.hbs
+ok 733 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-row.hbs
+ok 734 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/job-version.hbs
+ok 735 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/job-versions-stream.hbs
+ok 736 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/json-viewer.hbs
+ok 737 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/line-chart.hbs
+ok 738 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-accordion.hbs
+ok 739 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/list-accordion/accordion-body.hbs
+ok 740 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-accordion/accordion-head.hbs
+ok 741 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-pagination.hbs
+ok 742 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-pagination/list-pager.hbs
+ok 743 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-table.hbs
+ok 744 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/list-table/sort-by.hbs
+ok 745 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-table/table-body.hbs
+ok 746 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/list-table/table-head.hbs
+ok 747 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/multi-select-dropdown.hbs
+ok 748 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/page-layout.hbs
+ok 749 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/placement-failure.hbs
+ok 750 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/primary-metric.hbs
+ok 751 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/region-switcher.hbs
+ok 752 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/reschedule-event-row.hbs
+ok 753 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/reschedule-event-timeline.hbs
+ok 754 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/search-box.hbs
+ok 755 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/server-agent-row.hbs
+ok 756 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/stats-time-series.hbs
+ok 757 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/streaming-file.hbs
+ok 758 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/task-file.hbs
+ok 759 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/task-group-row.hbs
+ok 760 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/task-log.hbs
+ok 761 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/components/task-row.hbs
+ok 762 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/task-subnav.hbs
+ok 763 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/components/two-step-button.hbs
+ok 764 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/freestyle.hbs
+ok 765 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/head.hbs
+ok 766 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/index.hbs
+ok 767 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs.hbs
+ok 768 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/index.hbs
+ok 769 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/jobs/job.hbs
+ok 770 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/allocations.hbs
+ok 771 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/definition.hbs
+ok 772 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/jobs/job/deployments.hbs
+ok 773 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/evaluations.hbs
+ok 774 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/index.hbs
+ok 775 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/loading.hbs
+ok 776 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/subnav.hbs
+ok 777 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/task-group.hbs
+ok 778 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/jobs/job/versions.hbs
+ok 779 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/jobs/loading.hbs
+ok 780 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/jobs/run.hbs
+ok 781 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/loading.hbs
+ok 782 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/partials/forbidden-message.hbs
+ok 783 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/partials/hamburger-menu.hbs
+ok 784 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/partials/loading-spinner.hbs
+ok 785 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/partials/nomad-logo.hbs
+ok 786 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/servers.hbs
+ok 787 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/servers/index.hbs
+ok 788 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/servers/loading.hbs
+ok 789 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/servers/server.hbs
+ok 790 Chrome 75.0 - [0 ms] - TemplateLint: nomad-ui/templates/settings.hbs
+ok 791 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/settings/tokens.hbs
+ok 792 Chrome 75.0 - [1 ms] - TemplateLint: nomad-ui/templates/svg-patterns.hbs
+ok 793 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/allocation-detail-test.js
+ok 794 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/application-errors-test.js
+ok 795 Chrome 75.0 - [1 ms] - ESLint | tests: acceptance/client-detail-test.js
+ok 796 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/clients-list-test.js
+ok 797 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/job-allocations-test.js
+ok 798 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/job-definition-test.js
+ok 799 Chrome 75.0 - [1 ms] - ESLint | tests: acceptance/job-deployments-test.js
+ok 800 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/job-detail-test.js
+ok 801 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/job-evaluations-test.js
+ok 802 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/job-run-test.js
+ok 803 Chrome 75.0 - [1 ms] - ESLint | tests: acceptance/job-versions-test.js
+ok 804 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/jobs-list-test.js
+ok 805 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/namespaces-test.js
+ok 806 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/regions-test.js
+ok 807 Chrome 75.0 - [1 ms] - ESLint | tests: acceptance/server-detail-test.js
+ok 808 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/servers-list-test.js
+ok 809 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/task-detail-test.js
+ok 810 Chrome 75.0 - [1 ms] - ESLint | tests: acceptance/task-fs-test.js
+ok 811 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/task-group-detail-test.js
+ok 812 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/task-logs-test.js
+ok 813 Chrome 75.0 - [0 ms] - ESLint | tests: acceptance/token-test.js
+ok 814 Chrome 75.0 - [0 ms] - ESLint | tests: helpers/codemirror.js
+ok 815 Chrome 75.0 - [1 ms] - ESLint | tests: helpers/module-for-job.js
+ok 816 Chrome 75.0 - [1 ms] - ESLint | tests: helpers/resolver.js
+ok 817 Chrome 75.0 - [0 ms] - ESLint | tests: integration/allocation-row-test.js
+ok 818 Chrome 75.0 - [1 ms] - ESLint | tests: integration/app-breadcrumbs-test.js
+ok 819 Chrome 75.0 - [1 ms] - ESLint | tests: integration/attributes-table-test.js
+ok 820 Chrome 75.0 - [0 ms] - ESLint | tests: integration/components/copy-button-test.js
+ok 821 Chrome 75.0 - [0 ms] - ESLint | tests: integration/image-file-test.js
+ok 822 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-diff-test.js
+ok 823 Chrome 75.0 - [1 ms] - ESLint | tests: integration/job-editor-test.js
+ok 824 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/helpers.js
+ok 825 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/parts/body-test.js
+ok 826 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/parts/children-test.js
+ok 827 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/parts/latest-deployment-test.js
+ok 828 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/parts/placement-failures-test.js
+ok 829 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/parts/summary-test.js
+ok 830 Chrome 75.0 - [1 ms] - ESLint | tests: integration/job-page/parts/task-groups-test.js
+ok 831 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/periodic-test.js
+ok 832 Chrome 75.0 - [0 ms] - ESLint | tests: integration/job-page/service-test.js
+ok 833 Chrome 75.0 - [0 ms] - ESLint | tests: integration/list-pagination-test.js
+ok 834 Chrome 75.0 - [0 ms] - ESLint | tests: integration/list-table-test.js
+ok 835 Chrome 75.0 - [1 ms] - ESLint | tests: integration/multi-select-dropdown-test.js
+ok 836 Chrome 75.0 - [1 ms] - ESLint | tests: integration/page-layout-test.js
+ok 837 Chrome 75.0 - [1 ms] - ESLint | tests: integration/placement-failure-test.js
+ok 838 Chrome 75.0 - [1 ms] - ESLint | tests: integration/primary-metric-test.js
+ok 839 Chrome 75.0 - [0 ms] - ESLint | tests: integration/reschedule-event-timeline-test.js
+ok 840 Chrome 75.0 - [1 ms] - ESLint | tests: integration/streaming-file-test.js
+ok 841 Chrome 75.0 - [7 ms] - ESLint | tests: integration/task-file-test.js
+ok 842 Chrome 75.0 - [0 ms] - ESLint | tests: integration/task-log-test.js
+ok 843 Chrome 75.0 - [0 ms] - ESLint | tests: integration/two-step-button-test.js
+ok 844 Chrome 75.0 - [1 ms] - ESLint | tests: pages/allocations/detail.js
+ok 845 Chrome 75.0 - [0 ms] - ESLint | tests: pages/allocations/task/detail.js
+ok 846 Chrome 75.0 - [1 ms] - ESLint | tests: pages/allocations/task/fs.js
+ok 847 Chrome 75.0 - [0 ms] - ESLint | tests: pages/allocations/task/logs.js
+ok 848 Chrome 75.0 - [5 ms] - ESLint | tests: pages/clients/detail.js
+ok 849 Chrome 75.0 - [0 ms] - ESLint | tests: pages/clients/list.js
+ok 850 Chrome 75.0 - [1 ms] - ESLint | tests: pages/components/allocations.js
+ok 851 Chrome 75.0 - [0 ms] - ESLint | tests: pages/components/error.js
+ok 852 Chrome 75.0 - [0 ms] - ESLint | tests: pages/components/facet.js
+ok 853 Chrome 75.0 - [0 ms] - ESLint | tests: pages/components/job-editor.js
+ok 854 Chrome 75.0 - [0 ms] - ESLint | tests: pages/components/two-step-button.js
+ok 855 Chrome 75.0 - [1 ms] - ESLint | tests: pages/helpers/codemirror.js
+ok 856 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/detail.js
+ok 857 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/allocations.js
+ok 858 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/definition.js
+ok 859 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/deployments.js
+ok 860 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/evaluations.js
+ok 861 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/task-group.js
+ok 862 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/job/versions.js
+ok 863 Chrome 75.0 - [1 ms] - ESLint | tests: pages/jobs/list.js
+ok 864 Chrome 75.0 - [0 ms] - ESLint | tests: pages/jobs/run.js
+ok 865 Chrome 75.0 - [1 ms] - ESLint | tests: pages/layout.js
+ok 866 Chrome 75.0 - [0 ms] - ESLint | tests: pages/servers/detail.js
+ok 867 Chrome 75.0 - [0 ms] - ESLint | tests: pages/servers/list.js
+ok 868 Chrome 75.0 - [1 ms] - ESLint | tests: pages/settings/tokens.js
+ok 869 Chrome 75.0 - [0 ms] - ESLint | tests: test-helper.js
+ok 870 Chrome 75.0 - [0 ms] - ESLint | tests: unit/adapters/allocation-test.js
+ok 871 Chrome 75.0 - [0 ms] - ESLint | tests: unit/adapters/job-test.js
+ok 872 Chrome 75.0 - [0 ms] - ESLint | tests: unit/adapters/node-test.js
+ok 873 Chrome 75.0 - [0 ms] - ESLint | tests: unit/components/line-chart-test.js
+ok 874 Chrome 75.0 - [0 ms] - ESLint | tests: unit/components/stats-time-series-test.js
+ok 875 Chrome 75.0 - [0 ms] - ESLint | tests: unit/helpers/format-bytes-test.js
+ok 876 Chrome 75.0 - [0 ms] - ESLint | tests: unit/mixins/searchable-test.js
+ok 877 Chrome 75.0 - [0 ms] - ESLint | tests: unit/models/job-test.js
+ok 878 Chrome 75.0 - [1 ms] - ESLint | tests: unit/models/task-group-test.js
+ok 879 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/allocation-test.js
+ok 880 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/deployment-test.js
+ok 881 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/evaluation-test.js
+ok 882 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/job-plan-test.js
+ok 883 Chrome 75.0 - [1 ms] - ESLint | tests: unit/serializers/job-summary-test.js
+ok 884 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/job-test.js
+ok 885 Chrome 75.0 - [0 ms] - ESLint | tests: unit/serializers/node-test.js
+ok 886 Chrome 75.0 - [0 ms] - ESLint | tests: unit/services/breadcrumbs-test.js
+ok 887 Chrome 75.0 - [0 ms] - ESLint | tests: unit/services/stats-trackers-registry-test.js
+ok 888 Chrome 75.0 - [0 ms] - ESLint | tests: unit/services/token-test.js
+ok 889 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/add-to-path-test.js
+ok 890 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/allocation-stats-tracker-test.js
+ok 891 Chrome 75.0 - [1 ms] - ESLint | tests: unit/utils/behaviors/stats-tracker-frame-missing.js
+ok 892 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/format-duration-test.js
+ok 893 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/log-test.js
+ok 894 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/node-stats-tracker-test.js
+ok 895 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/rolling-array-test.js
+ok 896 Chrome 75.0 - [0 ms] - ESLint | tests: unit/utils/stream-frames-test.js
+ok 897 Chrome 75.0 - [0 ms] - ESLint | tests: utils/clean-whitespace.js
+ok 898 Chrome 75.0 - [0 ms] - ESLint | tests: utils/push-payload-to-store.js
+ok 899 Chrome 75.0 - [793 ms] - Unit | Adapter | Allocation: `stop` makes the correct API call
+ok 900 Chrome 75.0 - [395 ms] - Unit | Adapter | Allocation: `restart` makes the correct API call
+ok 901 Chrome 75.0 - [246 ms] - Unit | Adapter | Allocation: `restart` takes an optional task name and makes the correct API call
+ok 902 Chrome 75.0 - [456 ms] - Unit | Adapter | Job: The job endpoint is the only required endpoint for fetching a job
+ok 903 Chrome 75.0 - [590 ms] - Unit | Adapter | Job: When a namespace is set in localStorage but a job in the default namespace is requested, the namespace query param is not present
+ok 904 Chrome 75.0 - [390 ms] - Unit | Adapter | Job: When a namespace is in localStorage and the requested job is in the default namespace, the namespace query param is left out
+ok 905 Chrome 75.0 - [390 ms] - Unit | Adapter | Job: When the job has a namespace other than default, it is in the URL
+ok 906 Chrome 75.0 - [476 ms] - Unit | Adapter | Job: When there is no token set in the token service, no x-nomad-token header is set
+ok 907 Chrome 75.0 - [454 ms] - Unit | Adapter | Job: When a token is set in the token service, then x-nomad-token header is set
+ok 908 Chrome 75.0 - [282 ms] - Unit | Adapter | Job: findAll can be watched
+ok 909 Chrome 75.0 - [268 ms] - Unit | Adapter | Job: findRecord can be watched
+ok 910 Chrome 75.0 - [242 ms] - Unit | Adapter | Job: relationships can be reloaded
+ok 911 Chrome 75.0 - [215 ms] - Unit | Adapter | Job: relationship reloads can be watched
+ok 912 Chrome 75.0 - [260 ms] - Unit | Adapter | Job: findAll can be canceled
+ok 913 Chrome 75.0 - [205 ms] - Unit | Adapter | Job: findRecord can be canceled
+ok 914 Chrome 75.0 - [282 ms] - Unit | Adapter | Job: relationship reloads can be canceled
+ok 915 Chrome 75.0 - [239 ms] - Unit | Adapter | Job: requests can be canceled even if multiple requests for the same URL were made
+ok 916 Chrome 75.0 - [292 ms] - Unit | Adapter | Job: when there is no region set, requests are made without the region query param
+ok 917 Chrome 75.0 - [230 ms] - Unit | Adapter | Job: when there is a region set, requests are made with the region query param
+ok 918 Chrome 75.0 - [218 ms] - Unit | Adapter | Job: when the region is set to the default region, requests are made without the region query param
+ok 919 Chrome 75.0 - [225 ms] - Unit | Adapter | Node: findHasMany removes old related models from the store
+ok 920 Chrome 75.0 - [203 ms] - Unit | Adapter | Node: findHasMany does not remove old unrelated models from the store
+ok 921 Chrome 75.0 - [52 ms] - Unit | Component | line-chart: x scale domain is the min and max values in data based on the xProp value
+ok 922 Chrome 75.0 - [50 ms] - Unit | Component | line-chart: y scale domain uses the max value in the data based off of yProp, but is always zero-based
+ok 923 Chrome 75.0 - [50 ms] - Unit | Component | line-chart: the number of yTicks is always odd (to always have a mid-line) and is based off the chart height
+ok 924 Chrome 75.0 - [51 ms] - Unit | Component | line-chart: the values for yTicks are rounded to whole numbers
+ok 925 Chrome 75.0 - [58 ms] - Unit | Component | line-chart: the values for yTicks are fractions when the domain is between 0 and 1
+ok 926 Chrome 75.0 - [60 ms] - Unit | Component | line-chart: activeDatumLabel is the xProp value of the activeDatum formatted with xFormat
+ok 927 Chrome 75.0 - [64 ms] - Unit | Component | line-chart: activeDatumValue is the yProp value of the activeDatum formatted with yFormat
+ok 928 Chrome 75.0 - [66 ms] - Unit | Component | stats-time-series: xFormat is time-formatted for hours, minutes, and seconds
+ok 929 Chrome 75.0 - [72 ms] - Unit | Component | stats-time-series: yFormat is percent-formatted
+ok 930 Chrome 75.0 - [62 ms] - Unit | Component | stats-time-series: x scale domain is at least five minutes
+ok 931 Chrome 75.0 - [72 ms] - Unit | Component | stats-time-series: x scale domain is greater than five minutes when the domain of the data is larger than five minutes
+ok 932 Chrome 75.0 - [64 ms] - Unit | Component | stats-time-series: y scale domain is typically 0 to 1 (0 to 100%)
+ok 933 Chrome 75.0 - [69 ms] - Unit | Component | stats-time-series: the extent of the y domain overrides the default 0 to 1 domain when there are values beyond these bounds
+ok 934 Chrome 75.0 - [59 ms] - Unit | Component | stats-time-series: when there are only empty frames in the data array, the default y domain is used
+ok 935 Chrome 75.0 - [0 ms] - Unit | Helper | format-bytes: formats null/undefined as 0 bytes
+ok 936 Chrome 75.0 - [0 ms] - Unit | Helper | format-bytes: formats x < 1024 as bytes
+ok 937 Chrome 75.0 - [1 ms] - Unit | Helper | format-bytes: formats 1024 <= x < 1024 * 1024 as KiB
+ok 938 Chrome 75.0 - [0 ms] - Unit | Helper | format-bytes: formats 1024 * 1024 <= x < 1024 * 1024 * 1024 as MiB
+ok 939 Chrome 75.0 - [0 ms] - Unit | Helper | format-bytes: formats x > 1024 * 1024 * 1024 as MiB, since it is the highest allowed unit
+ok 940 Chrome 75.0 - [71 ms] - Unit | Mixin | Searchable: the searchable mixin does nothing when there is no search term
+ok 941 Chrome 75.0 - [71 ms] - Unit | Mixin | Searchable: the searchable mixin allows for regex search
+ok 942 Chrome 75.0 - [60 ms] - Unit | Mixin | Searchable: the searchable mixin only searches the declared search props
+ok 943 Chrome 75.0 - [66 ms] - Unit | Mixin | Searchable: the fuzzy search mode is off by default
+ok 944 Chrome 75.0 - [70 ms] - Unit | Mixin | Searchable: the fuzzy search mode can be enabled
+ok 945 Chrome 75.0 - [77 ms] - Unit | Mixin | Searchable: the exact match search mode can be disabled
+ok 946 Chrome 75.0 - [55 ms] - Unit | Mixin | Searchable: the regex search mode can be disabled
+ok 947 Chrome 75.0 - [66 ms] - Unit | Mixin | Searchable: each search mode has independent search props
+ok 948 Chrome 75.0 - [65 ms] - Unit | Mixin | Searchable: the resetPagination method is a no-op
+ok 949 Chrome 75.0 - [70 ms] - Unit | Mixin | Searchable (with pagination): the resetPagination method sets the currentPage to 1
+ok 950 Chrome 75.0 - [71 ms] - Unit | Model | job: should expose aggregate allocations derived from task groups
+ok 951 Chrome 75.0 - [59 ms] - Unit | Model | task-group: should expose reserved resource stats as aggregates of each task's reserved resources
+ok 952 Chrome 75.0 - [71 ms] - Unit | Serializer | Allocation: normalization: Normal
+ok 953 Chrome 75.0 - [61 ms] - Unit | Serializer | Allocation: normalization: Dots in task names
+ok 954 Chrome 75.0 - [74 ms] - Unit | Serializer | Allocation: normalization: With preemptions
+ok 955 Chrome 75.0 - [58 ms] - Unit | Serializer | Deployment: normalization: Normal
+ok 956 Chrome 75.0 - [69 ms] - Unit | Serializer | Deployment: normalization: Dots in task group names
+ok 957 Chrome 75.0 - [62 ms] - Unit | Serializer | Evaluation: normalization: Normal
+ok 958 Chrome 75.0 - [64 ms] - Unit | Serializer | Evaluation: normalization: Dots in task group names
+ok 959 Chrome 75.0 - [62 ms] - Unit | Serializer | JobPlan: normalization: Normal
+ok 960 Chrome 75.0 - [66 ms] - Unit | Serializer | JobPlan: normalization: Dots in task names
+ok 961 Chrome 75.0 - [56 ms] - Unit | Serializer | JobPlan: normalization: With preemptions
+ok 962 Chrome 75.0 - [73 ms] - Unit | Serializer | JobSummary: normalization: Normal
+ok 963 Chrome 75.0 - [60 ms] - Unit | Serializer | JobSummary: normalization: Dots in task group names
+ok 964 Chrome 75.0 - [72 ms] - Unit | Serializer | Job: `default` is used as the namespace in the job ID when there is no namespace in the payload
+ok 965 Chrome 75.0 - [60 ms] - Unit | Serializer | Job: The ID of the record is a composite of both the name and the namespace
+ok 966 Chrome 75.0 - [77 ms] - Unit | Serializer | Node: local store is culled to reflect the state of findAll requests
+ok 967 Chrome 75.0 - [60 ms] - Unit | Serializer | Node: normalization: Normal
+ok 968 Chrome 75.0 - [59 ms] - Unit | Serializer | Node: normalization: Dots in driver names
+ok 969 Chrome 75.0 - [65 ms] - Unit | Service | Breadcrumbs: when the route hierarchy has no breadcrumbs
+ok 970 Chrome 75.0 - [84 ms] - Unit | Service | Breadcrumbs: when the route hierarchy has one segment with static crumbs
+ok 971 Chrome 75.0 - [98 ms] - Unit | Service | Breadcrumbs: when the route hierarchy has multiple segments with static crumbs
+ok 972 Chrome 75.0 - [151 ms] - Unit | Service | Breadcrumbs: when the route hierarchy has a function as its breadcrumbs property
+ok 973 Chrome 75.0 - [75 ms] - Unit | Service | Breadcrumbs: when the route hierarchy has multiple segments with dynamic crumbs
+ok 974 Chrome 75.0 - [77 ms] - Unit | Service | Breadcrumbs: when a route provides a breadcrumb that is a promise, it gets passed through to the template
+ok 975 Chrome 75.0 - [73 ms] - Unit | Service | Breadcrumbs: when the route stays the same but the url changes, breadcrumbs get recomputed
+ok 976 Chrome 75.0 - [61 ms] - Unit | Service | Stats Trackers Registry: Creates a tracker when one isn’t found
+ok 977 Chrome 75.0 - [63 ms] - Unit | Service | Stats Trackers Registry: Returns an existing tracker when one is found
+ok 978 Chrome 75.0 - [53 ms] - Unit | Service | Stats Trackers Registry: Registry does not depend on persistent object references
+ok 979 Chrome 75.0 - [53 ms] - Unit | Service | Stats Trackers Registry: Has a max size
+ok 980 Chrome 75.0 - [68 ms] - Unit | Service | Stats Trackers Registry: Registry re-attaches deleted resources to cached trackers
+ok 981 Chrome 75.0 - [76 ms] - Unit | Service | Stats Trackers Registry: Registry re-attaches destroyed resources to cached trackers
+ok 982 Chrome 75.0 - [55 ms] - Unit | Service | Stats Trackers Registry: Removes least recently used when something needs to be removed
+ok 983 Chrome 75.0 - [84 ms] - Unit | Service | Stats Trackers Registry: Trackers are created using the token authorizedRequest
+ok 984 Chrome 75.0 - [60 ms] - Unit | Service | Token: authorizedRequest includes the region param when the system service says to
+ok 985 Chrome 75.0 - [59 ms] - Unit | Service | Token: authorizedRawRequest bypasses adding the region param
+ok 986 Chrome 75.0 - [0 ms] - Unit | Util | addToPath: Only domain
+ok 987 Chrome 75.0 - [0 ms] - Unit | Util | addToPath: Deep path
+ok 988 Chrome 75.0 - [0 ms] - Unit | Util | addToPath: With Query Params
+ok 989 Chrome 75.0 - [6 ms] - Unit | Util | AllocationStatsTracker: the AllocationStatsTracker constructor expects a fetch definition and an allocation
+ok 990 Chrome 75.0 - [4 ms] - Unit | Util | AllocationStatsTracker: the url property is computed based off the allocation id
+ok 991 Chrome 75.0 - [30 ms] - Unit | Util | AllocationStatsTracker: reservedCPU and reservedMemory properties come from the allocation
+ok 992 Chrome 75.0 - [7 ms] - Unit | Util | AllocationStatsTracker: the tasks list comes from the allocation
+ok 993 Chrome 75.0 - [62 ms] - Unit | Util | AllocationStatsTracker: poll results in requesting the url and calling append with the resulting JSON
+ok 994 Chrome 75.0 - [26 ms] - Unit | Util | AllocationStatsTracker: append appropriately maps a data frame to the tracked stats for cpu and memory for the allocation as well as individual tasks
+ok 995 Chrome 75.0 - [39 ms] - Unit | Util | AllocationStatsTracker: each stat list has maxLength equal to bufferSize
+ok 996 Chrome 75.0 - [29 ms] - Unit | Util | AllocationStatsTracker: the stats computed property macro constructs an AllocationStatsTracker based on an allocationProp and a fetch definition
+ok 997 Chrome 75.0 - [29 ms] - Unit | Util | AllocationStatsTracker: changing the value of the allocationProp constructs a new AllocationStatsTracker
+ok 998 Chrome 75.0 - [62 ms] - Unit | Util | AllocationStatsTracker: a bad response from a fetch request is handled gracefully
+ok 999 Chrome 75.0 - [66 ms] - Unit | Util | AllocationStatsTracker: enough bad responses from fetch consecutively (as set by maxFrameMisses) results in a pause
+ok 1000 Chrome 75.0 - [3 ms] - Unit | Util | formatDuration: When all units have values, all units are displayed
+ok 1001 Chrome 75.0 - [1 ms] - Unit | Util | formatDuration: Any unit without values gets dropped from the display
+ok 1002 Chrome 75.0 - [1 ms] - Unit | Util | formatDuration: The units option allows for units coarser than nanoseconds
+ok 1003 Chrome 75.0 - [1 ms] - Unit | Util | formatDuration: When duration is 0, 0 is shown in terms of the units provided to the function
+ok 1004 Chrome 75.0 - [1 ms] - Unit | Util | formatDuration: The longForm option expands suffixes to words
+ok 1005 Chrome 75.0 - [33 ms] - Unit | Util | Log: logStreamer is created on init
+ok 1006 Chrome 75.0 - [43 ms] - Unit | Util | Log: gotoHead builds the correct URL
+ok 1007 Chrome 75.0 - [58 ms] - Unit | Util | Log: When gotoHead returns too large of a log, the log is truncated
+ok 1008 Chrome 75.0 - [23 ms] - Unit | Util | Log: gotoTail builds the correct URL
+ok 1009 Chrome 75.0 - [37 ms] - Unit | Util | Log: startStreaming starts the log streamer
+ok 1010 Chrome 75.0 - [10 ms] - Unit | Util | Log: When the log streamer calls `write`, the output is appended
+ok 1011 Chrome 75.0 - [35 ms] - Unit | Util | Log: stop stops the log streamer
+ok 1012 Chrome 75.0 - [8 ms] - Unit | Util | NodeStatsTracker: the NodeStatsTracker constructor expects a fetch definition and a node
+ok 1013 Chrome 75.0 - [37 ms] - Unit | Util | NodeStatsTracker: the url property is computed based off the node id
+ok 1014 Chrome 75.0 - [35 ms] - Unit | Util | NodeStatsTracker: reservedCPU and reservedMemory properties come from the node
+ok 1015 Chrome 75.0 - [43 ms] - Unit | Util | NodeStatsTracker: poll results in requesting the url and calling append with the resulting JSON
+ok 1016 Chrome 75.0 - [6 ms] - Unit | Util | NodeStatsTracker: append appropriately maps a data frame to the tracked stats for cpu and memory for the node
+ok 1017 Chrome 75.0 - [48 ms] - Unit | Util | NodeStatsTracker: each stat list has maxLength equal to bufferSize
+ok 1018 Chrome 75.0 - [29 ms] - Unit | Util | NodeStatsTracker: the stats computed property macro constructs a NodeStatsTracker based on a nodeProp and a fetch definition
+ok 1019 Chrome 75.0 - [29 ms] - Unit | Util | NodeStatsTracker: changing the value of the nodeProp constructs a new NodeStatsTracker
+ok 1020 Chrome 75.0 - [84 ms] - Unit | Util | NodeStatsTracker: a bad response from a fetch request is handled gracefully
+ok 1021 Chrome 75.0 - [63 ms] - Unit | Util | NodeStatsTracker: enough bad responses from fetch consecutively (as set by maxFrameMisses) results in a pause
+ok 1022 Chrome 75.0 - [1 ms] - Unit | Util | RollingArray: has a maxLength property that gets set in the constructor
+ok 1023 Chrome 75.0 - [0 ms] - Unit | Util | RollingArray: push works like Array#push
+ok 1024 Chrome 75.0 - [0 ms] - Unit | Util | RollingArray: when pushing past maxLength, items are removed from the head of the array
+ok 1025 Chrome 75.0 - [0 ms] - Unit | Util | RollingArray: when splicing past maxLength, items are removed from the head of the array
+ok 1026 Chrome 75.0 - [1 ms] - Unit | Util | RollingArray: unshift throws instead of prepending elements
+ok 1027 Chrome 75.0 - [0 ms] - Unit | Util | RollingArray: RollingArray is an instance of Array
+ok 1028 Chrome 75.0 - [0 ms] - Unit | Util | stream-frames: decode: Single frame
+ok 1029 Chrome 75.0 - [0 ms] - Unit | Util | stream-frames: decode: Multiple frames
+ok 1030 Chrome 75.0 - [0 ms] - Unit | Util | stream-frames: decode: Empty frames
+ok 1031 Chrome 75.0 - [0 ms] - Unit | Util | stream-frames: decode: Empty string
+ok 1032 Chrome 75.0 - [0 ms] - ember-qunit: Ember.onerror validation: Ember.onerror is functioning properly
+
+1..1032
+# tests 1032
+# pass  1028
+# skip  3
+# fail  1
