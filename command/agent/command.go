@@ -56,7 +56,7 @@ type Command struct {
 }
 
 func (c *Command) readConfig() *Config {
-	var dev bool
+	var dev *devModeConfig
 	var configPath []string
 	var servers string
 	var meta []string
@@ -77,7 +77,10 @@ func (c *Command) readConfig() *Config {
 	flags.Usage = func() { c.Ui.Error(c.Help()) }
 
 	// Role options
-	flags.BoolVar(&dev, "dev", false, "")
+	flags.Var((flaghelper.FuncOptionalStringVar)(func(s string) (err error) {
+		dev, err = newDevMode(s)
+		return err
+	}), "dev", "")
 	flags.BoolVar(&cmdConfig.Server.Enabled, "server", false, "")
 	flags.BoolVar(&cmdConfig.Client.Enabled, "client", false, "")
 
@@ -204,8 +207,8 @@ func (c *Command) readConfig() *Config {
 
 	// Load the configuration
 	var config *Config
-	if dev {
-		config = DevConfig()
+	if dev != nil {
+		config = DevConfig(dev)
 	} else {
 		config = DefaultConfig()
 	}
